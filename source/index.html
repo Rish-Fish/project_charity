@@ -15,11 +15,16 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="header-back-image">
+
+  <template style="display: none">
+    <include src="build/img/sprite_auto.svg"></include>
+  </template>
+
+  <header class="page-header">
 
     <!-- Navigation -->
     <div class="wrapper">
-      <nav class="navigation">
+      <nav class="page-header__navigation navigation">
         <ul class="navigation__left-side">
           <li><a href="">Home</a></li>
           <li><a href="">About</a></li>
@@ -37,16 +42,16 @@
             <li><a href="">News</a></li>
             <li><a href="">FAQ</a></li>
           </ul>
-          <button type="button" class="accent-btn">Share</button>
+          <button type="button" class="page__accent-btn">Share</button>
         </div>
       </nav>
     </div>
 
     <!-- Section Hero -->
-    <section class="block-hero">
+    <section class="page-header__block-hero block-hero">
       <div class="wrapper">
         <h1>Transforming Cebuano lives by restoring the environment</h1>
-        <div class="btn-wrapper">
+        <div class="block-hero__btn-wrapper">
           <button type="button" class="accent-btn">Become a volunteer</button>
           <button type="button" class="accent-btn">Learn more</button>
         </div>
@@ -54,7 +59,7 @@
     </section>
   </header>
 
-  <main>
+  <main class="page-main">
 
     <!-- Section Quick info -->
     <section class="block-quick-info">
@@ -75,20 +80,20 @@
         </div>
 
         <div class="block-what-we-do__content-wrap">
-          <article class="block-what-we-do__article-wrap">
-            <div class="bg-image"></div>
+          <article class="block-what-we-do__article-wrap article-wrap">
+            <div class="article-wrap__bg-image"></div>
             <h3>Nulla eu rutrum enim</h3>
             <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
             <button class="accent-btn">Learn more</button>
           </article>
-          <article class="block-what-we-do__article-wrap">
-            <div class="bg-image"></div>
+          <article class="block-what-we-do__article-wrap article-wrap">
+            <div class="article-wrap__bg-image"></div>
             <h3>Vestibulum eu leo euismod</h3>
             <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
             <button class="accent-btn">Learn more</button>
           </article>
-          <article class="block-what-we-do__article-wrap">
-            <div class="bg-image"></div>
+          <article class="block-what-we-do__article-wrap article-wrap">
+            <div class="article-wrap__bg-image"></div>
             <h3>Phasellus pharetra tempus</h3>
             <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
             <button class="accent-btn">Learn more</button>
@@ -100,16 +105,24 @@
     <!-- Section Stats -->
     <section class="block-stats">
       <div class="wrapper">
-        <h2></h2>
+        <h2 class="visually-hidden">head</h2>
         <div class="block-stats__wrap">
-          <h3>1,608</h3>
-          <span>Donations</span>
-          <h3>22,536</h3>
-          <span>Families Benefited</span>
-          <h3>184</h3>
-          <span>Projects Created</span>
-          <h3>27</h3>
-          <span>Partners</span>
+          <div class="block-stats__item-wrap">
+            <h3>1,608</h3>
+            <span>Donations</span>
+          </div>
+          <div class="block-stats__item-wrap">
+            <h3>22,536</h3>
+            <span>Families Benefited</span>
+          </div>
+          <div class="block-stats__item-wrap">
+            <h3>184</h3>
+            <span>Projects Created</span>
+          </div>
+          <div class="block-stats__item-wrap">
+            <h3>27</h3>
+            <span>Partners</span>
+          </div> 
         </div>
       </div>
     </section>
@@ -209,9 +222,7 @@
     </div>
   </footer>
 
-  <template style="display: none">
-    <include src="build/img/sprite_auto.svg"></include>
-  </template>
+  
 
   <!-- <header class="page-header">
   </header>

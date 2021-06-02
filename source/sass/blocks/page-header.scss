@@ -1,0 +1,16 @@
+.page-header {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include bg-img ("../img/hero@1x.jpg");
+
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero@2x.jpg");
+    background-size: 1440px auto;
+    // width: 1440px;
+    // height: 680px;
+  }
+
+
+}
