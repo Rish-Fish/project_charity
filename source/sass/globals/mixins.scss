@@ -4,6 +4,13 @@
   line-height: $line-height;
 }
 
+@mixin flex ($direction, $wrap, ) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  
+
+}
+
 @mixin container($max-width, $padding) {
   margin: 0 auto;
   max-width: $max-width;
