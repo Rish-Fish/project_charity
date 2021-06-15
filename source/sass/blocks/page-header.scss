@@ -1,8 +1,12 @@
 .page-header {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
 
-  @include bg-img ("../img/hero@1x.jpg");
+  @include bg-img("../img/hero@1x.jpg");
 
 
   @media (min-resolution: $retina-dppx) {
@@ -11,34 +15,49 @@
     // width: 1440px;
     height: 680px;
   }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    max-width: 940px;
+  
+  @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+  // .wrapper {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   max-width: 940px;
+  //   width: 100%;
 
     .navigation {
+      display: flex;
       flex-direction: row;
       justify-content: space-between;
+      width: 100%;
+      padding-top: 28px;
+
 
       @include font(16px, 500, 19px);
 
-      &__left-side {
-        .left-side {
-          &__item {
+      &__left-side,
+      &__right-side {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+      
+        &__item {
 
-          }
-          &__link {
-
-          }
         }
+        &__link {
 
+        }
+      }
+      
+      &__logo {
+        margin: 0 89px 0 98px;
+      }
+      &__accent-btn{
+        @include button(15px, 15px);
+        margin-left: 38px;
       }
     }
-
-
-
-
   }
-
-
 }
