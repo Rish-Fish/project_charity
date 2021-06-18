@@ -16,48 +16,69 @@
     height: 680px;
   }
   
-  @include wrapper(column, nowrap, space-between, center, 940px, 100%);
-  // .wrapper {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  //   justify-content: space-between;
-  //   max-width: 940px;
-  //   width: 100%;
-
+  .wrapper {
+    @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+  
+    .page-header__navigation .side:nth-child(3) {
+      width: 65%;
+    }
     .navigation {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
       padding-top: 28px;
-
-
-      @include font(16px, 500, 19px);
-
-      &__left-side,
-      &__right-side {
+      align-items: baseline;
+      
+      .side {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
         padding: 0;
-      
+        list-style-type: none;
+        // @include font(16px, 500, 19px, $text-light);
+        
         &__item {
-
+          // color: $text-light;
+          // @include font(16px, 500, 19px, $text-light);
         }
         &__link {
-
+          @include font(16px, 500, 19px, $text-light, center);
+          // color: #fff;
         }
       }
       
       &__logo {
         margin: 0 89px 0 98px;
+        align-self: center;
       }
       &__accent-btn{
         @include button(15px, 15px);
         margin-left: 38px;
+        display: flex;
+        height: 32px;
+
+        .icon-white-heart {
+          margin-left: 9px;
+        }       
+      }
+    }
+  }
+
+  .page-header__block-hero,
+  .block-hero {
+    margin-top: 198px;
+
+    .wrapper {
+      @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+
+      &__head {
+        margin-top: 198px;
+        @include font(36px, 700, 40px, $text-light, center);
+
       }
     }
   }
 }
+

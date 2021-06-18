@@ -1,8 +1,9 @@
-@mixin font($size, $weight, $line-height, $text-color) {
+@mixin font($size, $weight, $line-height, $text-color, $text-align) {
   font-size: $size;
   font-weight: $weight;
   line-height: $line-height;
   color: $text-color;
+  text-align: $text-align;
 }
 
 @mixin flex($direction, $wrap, $justyfy, $align) {
@@ -45,13 +46,13 @@
   padding-right: $pr;
   padding-bottom: 11px;
   padding-left: $pl;
-
+  border-style: none;
   border-radius: 4px;
+  height: 40px;
+  align-items: center;
 
-  @include font(16px, 700, 19px, $text-light);
-  text-align: center;
-  // color: $text-light;
-  // color: #fff;
+  @include font(16px, 700, 19px, $text-light, center);
+  // text-align: center;
 
   background: $bg-green;
 }
