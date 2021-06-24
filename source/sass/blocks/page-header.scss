@@ -1,10 +1,5 @@
 .page-header {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
+  @include section-wrap (1440px);
 
   @include bg-img("../img/hero@1x.jpg");
 
@@ -16,67 +11,76 @@
     height: 680px;
   }
   
-  .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+  // .wrapper {
+  //   @include wrapper(column, nowrap, space-between, center, 940px, 100%);
   
-    .page-header__navigation .side:nth-child(3) {
-      width: 65%;
-    }
-    .navigation {
+  .page-header__navigation .side:nth-child(3) {
+    width: 65%;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 28px;
+    align-items: baseline;
+    
+    .side {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      padding-top: 28px;
-      align-items: baseline;
+      padding: 0;
+      list-style-type: none;
+      // @include font(16px, 500, 19px, $text-light);
       
-      .side {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        padding: 0;
-        list-style-type: none;
+      &__item {
+        // color: $text-light;
         // @include font(16px, 500, 19px, $text-light);
-        
-        &__item {
-          // color: $text-light;
-          // @include font(16px, 500, 19px, $text-light);
-        }
-        &__link {
-          @include font(16px, 500, 19px, $text-light, center);
-          // color: #fff;
-        }
       }
-      
-      &__logo {
-        margin: 0 89px 0 98px;
-        align-self: center;
-      }
-      &__accent-btn{
-        @include button(15px, 15px);
-        margin-left: 38px;
-        display: flex;
-        height: 32px;
-
-        .icon-white-heart {
-          margin-left: 9px;
-        }       
+      &__link {
+        @include font(16px, 500, 19px, $text-light, center);
+        // color: #fff;
       }
     }
+    
+    &__logo {
+      margin: 0 89px 0 98px;
+      align-self: center;
+    }
+    &__accent-btn,
+    .accent-btn {
+      @include button(15px, 15px, $bg-green);
+      margin-left: 38px;
+      display: flex;
+      height: 32px;
+
+      &__icon-white-heart {
+        margin-left: 9px;
+      }       
+    }
   }
+  // }
 
-  .page-header__block-hero,
+  // .page-header__block-hero,
+  &__block-hero,
   .block-hero {
-    margin-top: 198px;
+    // margin-top: 198px;
 
-    .wrapper {
-      @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+  
+    &__head {
+      margin-top: 198px;
+      @include font(36px, 700, 40px, $text-light, center);
 
-      &__head {
-        margin-top: 198px;
-        @include font(36px, 700, 40px, $text-light, center);
-
+    }
+    &__btn-wrapper {
+      margin-top: 24px;
+      .accent-btn {
+        @include button (29px, 29px, $bg-green);
+      }
+      .accent-btn__light {
+        @include button (24px, 24px, $bg-btn-light); 
+        margin-left: 43px;
       }
     }
   }

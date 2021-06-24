@@ -1,0 +1,31 @@
+.block-stats {
+  @include section-wrap (940px);
+  background-color: $bg-stats;
+  &__wrap, 
+  .wrap {
+    @include flex (row, wrap, space-between, center);
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 42px;
+
+    &__item:first-child {
+      margin-left: 64px;
+    }
+
+    &__item:last-child {
+      margin-right: 64px;
+    }
+
+    &__item,
+    .item {
+      &__head {
+        @include font (24px, 700, 29px, $text-main, flex-start);
+      }
+  
+      &__desc {
+        @include font (16px, 500, 19px, $text-main, flex-start);
+      }
+    }
+  }
+
+}

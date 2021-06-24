@@ -29,13 +29,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+h1, h2, h3, h4, p {
+  font-weight: normal;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-// .page__accent-btn {
-//   @include button ()
-//   // width: 176px;
-//   // height: 40px;
-//   background: #0E6248;
-//   border-radius: 4px;
-//   padding: 10px 15px;
-//   border-style: none;
+.wrapper {
+  @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+}
+
+// .accent-btn {
+//   @include button (29px, 29px);
 // }

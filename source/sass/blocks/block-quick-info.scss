@@ -1,0 +1,7 @@
+.block-quick-info {
+  @include section-wrap (1440px);
+  background-color: $bg-stats;
+
+  @include font(18px, 400, 22px, $text-main, center);
+  padding: 38px 0;
+}

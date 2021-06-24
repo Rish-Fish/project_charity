@@ -1,0 +1,73 @@
+.block-what-we-do {
+  @include section-wrap (1440px);
+  
+  &__head-wrap,
+  .head-wrap {
+    @include flex (row, nowrap, space-between, center);
+    width: 100%;
+    padding: 120px 0 88px 0;
+
+    &__desc,
+    .desc {
+      
+      &__head {
+        @include font (12px, 700, 14px, $text-subscribe-btn, start);
+      }
+      &__text {
+        @include font (20px, 700, 24px, $text-main, start);
+      }
+    }
+    &__accent-btn {
+      @include button (29px, 29px, $bg-green);
+    }
+  }
+  &__content-wrap,
+  .content-wrap {
+    @include flex (row, nowrap, space-between, center);
+    width: 100%;
+    margin-bottom: 120px;
+
+    &__article-wrap,
+    .article-wrap {
+      @include flex (column, wrap, space-between, flex-start);
+      position: relative;
+      padding-top: 166px;
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 24px;
+      // padding: 166px, 24px, 24px, 24px;
+      border: 1px solid $border-light;
+      border-radius: 8px;
+      max-width: 232px;
+
+      &__bg-image-1 {
+        @include bg-img-special ("../img/w-w-d_image1_@1x.png", 280px, 168px, -190px, 22px);
+        position: absolute;
+      }
+      &__bg-image-2 {
+        @include bg-img-special ("../img/w-w-d_image2_@1x.png", 280px, 168px, -190px, 22px);
+        position: absolute;
+      }
+      &__bg-image-3 {
+        @include bg-img-special ("../img/w-w-d_image3_@1x.png", 280px, 168px, -190px, 22px);
+        position: absolute;
+      }
+      &__head {
+        @include font (18px, 700, 22px, $text-main, flex-start);
+      }
+      &__desc {
+        @include font (16px, 400, 22px, $text-main, flex-start);
+        padding-top: 8px;
+        padding-bottom: 16px;
+      }
+
+      &__accent-btn {
+        @include button (20px, 20px, $bg-green);
+        align-self: center;
+      }
+    }
+  }
+
+
+
+}

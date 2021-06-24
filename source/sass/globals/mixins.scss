@@ -6,7 +6,7 @@
   text-align: $text-align;
 }
 
-@mixin flex($direction, $wrap, $justyfy, $align) {
+@mixin flex($direction, $wrap, $justify, $align) {
   display: flex;
   flex-flow: $direction $wrap;
   justify-content: $justify;
@@ -22,10 +22,15 @@
   width: $width;
 }
 
-@mixin btn-light() {
-  background-color: $bg-btn-light;
-}
 
+@mixin section-wrap ($m-width) {
+  max-width: $m-width;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 @mixin container($max-width, $padding) {
   margin: 0 auto;
@@ -39,9 +44,8 @@
   padding: $padding;
 }
 
-@mixin button($pr, $pl) {
+@mixin button($pr, $pl, $bg-btn) {
   box-sizing: border-box;
-  // width: $width;
   padding-top: 10px;
   padding-right: $pr;
   padding-bottom: 11px;
@@ -50,15 +54,23 @@
   border-radius: 4px;
   height: 40px;
   align-items: center;
-
+  
   @include font(16px, 700, 19px, $text-light, center);
-  // text-align: center;
-
-  background: $bg-green;
+  
+  background: $bg-btn;
 }
+
 
 @mixin bg-img($url) {
   background-image: url($url);
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+@mixin bg-img-special ($url, $width, $height, $margin-top, $padding-bottom) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  width: $width;
+  height: $height;
+  margin-top: $margin-top;
+  padding-bottom: $padding-bottom;
 }
