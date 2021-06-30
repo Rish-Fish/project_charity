@@ -140,13 +140,35 @@
     <!-- Section Donate -->
     <section class="block-donate">
       <div class="wrapper">
-        <div class="block-donate__wrap">
-          <div class="block-donate__desc">
-            <h2>Want to help? We are always in need of donations, vitae ex quam. Quisque nulla purus, elementum eu nunc at, cursus finibus tortor. </h2>
-            <p>Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo. <wbr><wbr>porta dui non libero viverra mattis a nec velit. Integer nulla tellus, dignissim eget posuere a, lobortis in justo. Quisque hendrerit egestas neque. Donec turpis sapien, dignissim in augue ac, venenatis interdum justo.</p>
+        <div class="block-donate__wrap wrap">
+          <div class="wrap__text text">
+            <h2 class="text__head-donate">Want to help? We are always in need of donations, vitae ex quam. Quisque nulla purus, elementum eu nunc at, cursus finibus tortor.</h2>
+            <p class="text__desc-donate">Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo.<br><br>porta dui non libero viverra mattis a nec velit. Integer nulla tellus, dignissim eget posuere a, lobortis in justo. Quisque hendrerit egestas neque. Donec turpis sapien, dignissim in augue ac, venenatis interdum justo.</p>
           </div>
           <div class="block-donate__form">
+            <form action="#" class="form__box box">
+              <label for="name" class="box__item">Name:</label>
+              <input type="text" name="donate" id="name" class="box__input">
 
+              <label for="email" class="box__item">Email:</label>
+              <input type="email" name="donate" id="email" class="box__input">
+
+              <label for="amount" class="box__item">Amount:</label>
+              <div class="box__select">
+                <select name="amount" id="amount">
+                <option value="PHP">PHP</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                </select>
+                <input type="number" name="donate" id="amount" class="box__input">
+              </div>
+
+              <button type="submit" class="box__accent-btn accent-btn">Donate
+                  <svg width="16" height="16" class="accent-btn__icon-white-heart">
+                    <use xlink:href="img/sprite_auto.svg#icon-white-heart"></use>
+                  </svg>
+              </button>
+            </form>
           </div>
         </div>
       </div>
