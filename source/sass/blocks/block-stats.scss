@@ -1,6 +1,8 @@
 .block-stats {
   @include section-wrap (940px);
   background-color: $bg-stats;
+  border-radius: 8px;
+  
   &__wrap, 
   .wrap {
     @include flex (row, wrap, space-between, center);

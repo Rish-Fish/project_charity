@@ -1,0 +1,42 @@
+.block-newsletter {
+  @include section-wrap (940px);
+  background-color: $bg-green;
+  border-radius: 8px;
+
+    &__bg-wrap,
+    .bg-wrap {
+      padding: 32px 0 45px 0;
+
+      &__head {
+        @include font (24px, 700, 29px, $text-light, center);
+      }
+      &__desc {
+        @include font (16px, 400, 22px, $text-light, center);
+        margin-top: 8px;
+        margin-bottom: 24px;
+      }
+      &__subscribe-wrap,
+      .subscribe-wrap {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        &__input {
+          background: $bg-stats;
+          border: $border-light;
+          border-radius: 4px 0px 0px 4px;
+          height: 40px;
+          width: 280px;
+        }
+        &__accent-btn {
+          @include button (27px, 23px, $bg-green);
+          border-radius: 0px 4px 4px 0px;
+          // color: $text-subscribe-btn;
+          @include font (16px, 700, 19.2px, $text-subscribe-btn, center);
+          background: rgba(255, 255, 255, 0.85098);
+          height: 44px;
+        }
+      }
+    
+    }
+}

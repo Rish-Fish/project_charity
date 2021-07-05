@@ -158,22 +158,22 @@
             <h2 class="text__head-donate">Want to help? We are always in need of donations, vitae ex quam. Quisque nulla purus, elementum eu nunc at, cursus finibus tortor.</h2>
             <p class="text__desc-donate">Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo.<br><br>porta dui non libero viverra mattis a nec velit. Integer nulla tellus, dignissim eget posuere a, lobortis in justo. Quisque hendrerit egestas neque. Donec turpis sapien, dignissim in augue ac, venenatis interdum justo.</p>
           </div>
-          <div class="block-donate__form">
+          <div class="block-donate__form form">
             <form action="#" class="form__box box">
               <label for="name" class="box__item">Name:</label>
-              <input type="text" name="donate" id="name" class="box__input">
+              <input type="text" name="donate" id="name" class="box__input" required="" placeholder=" Alexandra">
 
               <label for="email" class="box__item">Email:</label>
-              <input type="email" name="donate" id="email" class="box__input">
+              <input type="email" name="donate" id="email" class="box__input" required="" placeholder=" myemail@gmail.com">
 
               <label for="amount" class="box__item">Amount:</label>
-              <div class="box__select">
-                <select name="amount" id="amount">
-                <option value="PHP">PHP</option>
-                <option value="EUR">EUR</option>
-                <option value="USD">USD</option>
+              <div class="box__select select">
+                <select name="amount" id="amount" class="select__wrap-t wrap-t">
+                  <option value="PHP" class="select__tap">PHP</option>
+                  <option value="EUR" class="select__tap">EUR</option>
+                  <option value="USD" class="select__tap">USD</option>
                 </select>
-                <input type="number" name="donate" id="amount" class="box__input">
+                <input type="number" name="donate" id="amount" class="select__input" required="" placeholder=" 3">
               </div>
 
               <button type="submit" class="box__accent-btn accent-btn">Donate
@@ -190,28 +190,29 @@
     <!-- Section Resources -->
     <section class="block-resorces">
       <div class="wrapper">
-        <div class="block-resorces__head-wrap">
-          <div class="block-resorces__desc">
-            <h2>Reading resources</h2>
-            <p>Quisque laoreet eros ut elementum molestie. Morbi posuere non ante non porta. Vivamus posuere lectus sed urna commodo gravida.</p>
+        <div class="block-resorces__head-wrap head-wrap">
+          <div class="head-wrap__desc desc">
+            <h2 class="desc__head">Reading resources</h2>
+            <p class="desc__text">Quisque laoreet eros ut elementum molestie. Morbi posuere non<br>ante non porta. Vivamus posuere lectus sed urna commodo gravida.</p>
           </div>
-          <button class="accent-btn">Become a partner</button>
+          <button class="head-wrap__accent-btn">Become a partner</button>
         </div>
-        <div class="block-resorces__content-wrap">
-          <article class="block-resorces__article-wrap">
-            <h3>Nulla eu rutrum enim</h3>
-            <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
-            <button class="accent-btn">Download</button>
+
+        <div class="block-resorces__content-wrap content-wrap">
+          <article class="content-wrap__article-wrap article-wrap">
+            <h3 class="article-wrap__head">Nulla eu rutrum enim</h3>
+            <p class="article-wrap__desc">Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
+            <button class="article-wrap__accent-btn">Download</button>
           </article>
-          <article class="block-resorces__article-wrap">
-            <h3>Nulla eu rutrum enim</h3>
-            <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
-            <button class="accent-btn">Download</button>
+          <article class="block-resorces__article-wrap article-wrap">
+            <h3 class="article-wrap__head">Nulla eu rutrum enim</h3>
+            <p class="article-wrap__desc">Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
+            <button class="article-wrap__accent-btn">Download</button>
           </article>
-          <article class="block-resorces__article-wrap">
-            <h3>Nulla eu rutrum enim</h3>
-            <p>Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
-            <button class="accent-btn">Download</button>
+          <article class="block-resorces__article-wrap article-wrap">
+            <h3 class="article-wrap__head">Nulla eu rutrum enim</h3>
+            <p class="article-wrap__desc">Ut bibendum sagittis nibh, eget finibus sapien ornare sed. Mauris eget elit pharetra neque dictum bibendum at vestibulum sapien. Proin sodales, ex ac ornare hendrerit, nulla nisl semper leo</p>
+            <button class="article-wrap__accent-btn">Download</button>
           </article>
       </div>
     </div></section>
@@ -219,12 +220,12 @@
     <!-- Section Newsletter -->
     <section class="block-newsletter">
       <div class="wrapper">
-        <div class="block-newsletter__bg-wrap">
-          <h2>Helps us make more sustainable projects</h2>
-          <p>Donec turpis sapien, dignissim in augue ac, venenatis interdum justo. </p>
-          <div class="block-newsletter__subscribe-wrap">
-            <input type="email" placeholder="Email">
-            <button type="submit">Subscribe</button>
+        <div class="block-newsletter__bg-wrap bg-wrap">
+          <h2 class="bg-wrap__head">Helps us make more sustainable projects</h2>
+          <p class="bg-wrap__desc">Donec turpis sapien, dignissim in augue ac, venenatis interdum justo. </p>
+          <div class="bg-wrap__subscribe-wrap subscribe-wrap">
+            <input type="email" placeholder="  Email" required="" class="subscribe-wrap__input">
+            <button type="submit" class="subscribe-wrap__accent-btn">Subscribe</button>
           </div>
         </div>
       </div>

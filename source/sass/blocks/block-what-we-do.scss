@@ -12,6 +12,7 @@
       
       &__head {
         @include font (12px, 700, 14px, $text-subscribe-btn, start);
+        text-transform: uppercase;
       }
       &__text {
         @include font (20px, 700, 24px, $text-main, start);
@@ -36,7 +37,7 @@
       padding-right: 24px;
       padding-bottom: 24px;
       // padding: 166px, 24px, 24px, 24px;
-      border: 1px solid $border-light;
+      border: $border-light;
       border-radius: 8px;
       max-width: 232px;
 

@@ -24,6 +24,17 @@
     .form {
       width: 40%;
       @include flex (column, nowrap, center, center);
+      border: 1px solid $bg-stats;
+      border-radius: 4px;
+      box-shadow: $shadow-input;
+      // position: absolute;
+      // left: 59.49%;
+      padding-top: 30px;
+      padding-left: 26px;
+      padding-right: 26px;
+      padding-bottom: 30px;
+      background: $text-light;
+      
       
       &__box,
       .box {
@@ -31,21 +42,56 @@
         width: 332px;
         
         &__item {
+          @include font (14px, 700, 17px, $text-main, flex-start);
           // flex-direction: column;
-          
+          margin-top: 16px;
+          margin-bottom: 4px;
         }
         &__input {
+          border: $border-light;
+          border-radius: 4px;
+          padding-left: 5px;
+          margin: 0;
+          // width: 332px;
+          height: 40px;
+          width: 330px;
+        }
+        &__select,
+        .select {
+          display: flex;
           width: 100%;
-        }
-        &__select {
+          width: 332px;
+          height: 41px;
+          padding: 0;
 
+          &__wrap-t,
+          .wrap-t {
+            border: $border-light;
+            border-radius: 4px 0 0 4px;
+            @include font (16px, 700, 19px, $text-main, center);
+            padding: 8px 16px 10px;
+            margin: 0;
+          //   &__tap {
+          //   }
+          }
+          &__input {
+            width: 100%;
+            border: $border-light;
+            border-radius: 0 4px 4px 0;
+            padding: 0;
+          }
         }
+
         &__accent-btn,
         .accent-btn {
           @include button(15px, 15px, $bg-green);
           margin-left: 38px;
           display: flex;
-          height: 32px;
+          height: 40px;
+          width: 120px;
+          margin-top: 26px;
+          margin-left: 0;
+          justify-content: center;
 
           &__icon-white-heart {
             margin-left: 9px;
