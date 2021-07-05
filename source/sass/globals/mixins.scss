@@ -54,6 +54,7 @@
   border-radius: 4px;
   height: 40px;
   align-items: center;
+  cursor: pointer;
   
   @include font(16px, 700, 19px, $text-light, center);
   

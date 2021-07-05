@@ -1,0 +1,35 @@
+.page-footer,
+.footer {
+  @include section-wrap (1440px);
+  background-color: $bg-black;
+  margin-top: 104px;
+  padding: 40px 0 52px 0;
+  
+  &__bottom-wrap,
+  .bottom-wrap {
+    display: flex;
+    flex-direction: row;
+
+    .footer__left-side, 
+    .left-side {
+      @include font (12px, 500, 18px, $text-light, flex-start);
+      
+      &__desc {
+  
+      }
+      &__social-wrap,
+      .social-wrap {
+  
+      }
+    }
+    &__right-side,
+    .right-side {
+      @include font (12px, 500, 18px, $text-light, flex-end);
+      &__info {
+  
+      }
+    }
+
+  }
+
+}
