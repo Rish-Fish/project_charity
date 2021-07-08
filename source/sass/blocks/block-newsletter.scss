@@ -27,14 +27,29 @@
           border-radius: 4px 0px 0px 4px;
           height: 40px;
           width: 280px;
+          text-indent: 5px;
         }
-        &__accent-btn {
+        &__input:valid .accent-btn {
+          background-color: rgb(208, 127, 255);
+        }
+
+        &__accent-btn,
+        .accent-btn {
           @include button (27px, 23px, $bg-green);
           border-radius: 0px 4px 4px 0px;
           // color: $text-subscribe-btn;
           @include font (16px, 700, 19.2px, $text-subscribe-btn, center);
           background: rgba(255, 255, 255, 0.85098);
-          height: 44px;
+          height: 42px;
+
+          &:hover {
+            @include button-hover-active ($text-link);
+            transform: scale(1);
+          }
+          &:active {
+            @include button-hover-active ($btn-active);
+            transform: scale(1);
+          }
         }
       }
     

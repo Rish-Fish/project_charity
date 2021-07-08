@@ -4,7 +4,7 @@ html {
 
 body {
   position: relative;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 18px;
   line-height: 22px;
   font-weight: 400;
@@ -15,11 +15,19 @@ body {
   padding: 0;
   width: 100%;
 }
+svg:not(:root) {
+  overflow: visible;
+}
+svg {
+  fill: #fff;
+}
 
 a {
   text-decoration: none;
   color: $text-main;
+  cursor: pointer;
 }
+
 
 img {
   max-width: 100%;
@@ -31,11 +39,16 @@ h1, h2, h3, h4, p {
   margin: 0;
   padding: 0;
 }
+input {
+  padding: 0;
+  margin: 0;
+}
 
 .wrapper {
   @include wrapper(column, nowrap, space-between, center, 940px, 100%);
 }
 
-// .accent-btn {
-//   @include button (29px, 29px);
+// .accent-btn:hover {
+//   @include button-hover($btn-hover);
 // }
+

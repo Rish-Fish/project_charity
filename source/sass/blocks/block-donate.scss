@@ -12,11 +12,11 @@
       width: 60%;
       max-width: 440px;
       &__head-donate {
-        @include font (24px, 700, 29px, $text-main, flex-start);
+        @include font (24px, 700, 29px, $text-main, left);
         margin-bottom: 24px;
       }
       &__desc-donate {
-        @include font (16px, 400, 22px, $text-main, flex-start);
+        @include font (16px, 400, 22px, $text-main, left);
       }
     }
 
@@ -35,33 +35,39 @@
       padding-bottom: 30px;
       background: $text-light;
       
-      
+    
       &__box,
       .box {
         @include flex (column, nowrap, center, flex-start);
         width: 332px;
         
         &__item {
-          @include font (14px, 700, 17px, $text-main, flex-start);
+          @include font (14px, 700, 17px, $text-main, left);
           // flex-direction: column;
           margin-top: 16px;
           margin-bottom: 4px;
         }
-        &__input {
+        &__input, 
+        .input {
           border: $border-light;
           border-radius: 4px;
-          padding-left: 5px;
+          // padding-left: 5px;
           margin: 0;
           // width: 332px;
           height: 40px;
           width: 330px;
+          text-indent: 5px;
+
+          // &::placeholder {
+          //   padding-left: 5px;
+          // }
         }
         &__select,
         .select {
           display: flex;
           width: 100%;
           width: 332px;
-          height: 41px;
+          height: 42px;
           padding: 0;
 
           &__wrap-t,
@@ -74,12 +80,26 @@
           //   &__tap {
           //   }
           }
-          &__input {
+          &__input, 
+          .input {
             width: 100%;
             border: $border-light;
             border-radius: 0 4px 4px 0;
-            padding: 0;
+            // padding: 0 0 0 10px;
+            // text-indent:5px;
+
+
+          // &::placeholder {
+          //   padding-left: 3px;
+          // }
           }
+          // &__input, 
+          // .input {
+          //   .accent-btn {
+          //     background: $shadow-link;
+          //     border: 1px solid green;
+          //   }
+          // }
         }
 
         &__accent-btn,
@@ -97,7 +117,22 @@
             margin-left: 9px;
           }       
         }
+        .accent-btn:hover {
+          @include button-hover-active($btn-hover);
+        }
+        .accent-btn:active {
+          @include button-hover-active ($btn-active);
+          transform: scale(1);
+        }
       }
     }
+    
+    .input:valid .box-accent-btn {
+        background: blue;
+        border: 1px solid blue;
+        @include button(15px, 15px, blue);
+      
+    }
+
   }
 }

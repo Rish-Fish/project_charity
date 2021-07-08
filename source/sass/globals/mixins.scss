@@ -23,8 +23,8 @@
 }
 
 
-@mixin section-wrap ($m-width) {
-  max-width: $m-width;
+@mixin section-wrap ($max-width) {
+  max-width: $max-width;
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -59,6 +59,12 @@
   @include font(16px, 700, 19px, $text-light, center);
   
   background: $bg-btn;
+}
+
+@mixin button-hover-active ($background){
+  background: $background;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
 }
 
 
