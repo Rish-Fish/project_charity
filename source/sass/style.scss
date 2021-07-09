@@ -3,6 +3,7 @@
 @import "globals/fonts.scss";
 @import "globals/visually-hidden.scss";
 @import "globals/mixins.scss";
+@import "globals/global.scss";
 @import "globals/swiper.scss";
 @import "globals/variables.scss";
 
@@ -15,5 +16,3 @@
 @import "blocks/block-resorces.scss";
 @import "blocks/block-newsletter.scss";
 @import "blocks/page-footer.scss";
-
-@import "globals/global.scss";

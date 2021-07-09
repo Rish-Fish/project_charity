@@ -33,7 +33,7 @@
     
     &__right-side,
     .right-side {
-      @include flex (column, wrap, start, flex-end);
+      @include flex (column, wrap, flex-start, flex-end);
       
       &__wrap, 
       .wrap {
