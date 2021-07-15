@@ -1,6 +1,6 @@
 .block-gallery {
-  @include section-wrap (1440px);
-  @include bg-img ("../img/gallery@1x.jpg");
+  @include section-wrap(1440px);
+  @include bg-img("../img/gallery@1x.jpg");
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/gallery@2x.png");
@@ -8,5 +8,17 @@
     height: 382px;
   }
   margin-top: 70px;
+}
 
+// Tablet: 1199px
+@media (max-width: $table-width) {
+  .block-gallery {
+    @include section-wrap(1024px);
+    @media (min-resolution: $retina-dppx) {
+      // background-image: url("../img/gallery@2x.png");
+      background-size: 1166px auto;
+      height: 300px;
+    }
+    margin-top: 70px;
+  }
 }

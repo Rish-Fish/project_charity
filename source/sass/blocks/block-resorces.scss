@@ -1,37 +1,36 @@
-.block-resorces {
-  @include section-wrap (1440px);
-  
+.block-resources {
+  @include section-wrap(1440px);
+
   &__head-wrap,
   .head-wrap {
-    @include flex (row, nowrap, space-between, center);
+    @include flex(row, nowrap, space-between, center);
     width: 100%;
     padding: 120px 0 88px 0;
 
     &__desc,
     .desc {
-      
+      width: 70%;
       &__head {
-        @include font (12px, 700, 14px, $text-subscribe-btn, left);
+        @include font(12px, 700, 14px, $text-subscribe-btn, start);
         text-transform: uppercase;
       }
       &__text {
-        @include font (20px, 700, 24px, $text-main, left);
+        @include font(20px, 700, 24px, $text-main, start);
       }
     }
     &__accent-btn {
-      @include button (29px, 29px, $bg-green);
+      @include button(29px, 29px, $bg-green);
     }
   }
   &__content-wrap,
   .content-wrap {
-    @include flex (row, nowrap, space-between, center);
+    @include flex(row, nowrap, space-between, center);
     width: 100%;
     margin-bottom: 120px;
 
     &__article-wrap,
     .article-wrap {
-      @include flex (column, wrap, space-between, flex-start);
-      // position: relative;
+      @include flex(column, wrap, space-between, flex-start);
       padding-top: 26px;
       padding-left: 24px;
       padding-right: 24px;
@@ -41,25 +40,64 @@
       max-width: 232px;
 
       &__head {
-        @include font (18px, 700, 22px, $text-main, left);
+        @include font(18px, 700, 22px, $text-main, flex-start);
       }
       &__desc {
-        @include font (16px, 400, 22px, $text-main, left);
+        @include font(16px, 400, 22px, $text-main, flex-start);
         padding-top: 8px;
         padding-bottom: 16px;
       }
 
       &__accent-btn {
-        @include button (20px, 20px, $bg-green);
+        @include button(20px, 20px, $bg-green);
         align-self: center;
       }
     }
   }
   .accent-btn:hover {
-    @include button-hover-active ($btn-hover);
+    @include button-hover-active($btn-hover);
   }
   .accent-btn:active {
-    @include button-hover-active ($btn-active);
+    @include button-hover-active($btn-active);
     transform: scale(0.8);
+  }
+}
+
+// Tablet: 1199px
+@media (max-width: $table-width) {
+  .block-resources {
+    @include section-wrap(1199px);
+    &__head-wrap,
+    .head-wrap {
+      width: auto;
+      padding: 100px 0 50px 0;
+      margin: 0 15px;
+
+      &__desc,
+      .desc {
+        width: 70%;
+        &__head {
+        }
+      }
+    }
+    &__content-wrap,
+    .content-wrap {
+      width: 100%;
+      margin-bottom: 50px;
+      justify-content: space-around;
+
+      &__article-wrap,
+      .article-wrap {
+        width: 25%;
+        // position: relative;
+        padding: 25px 15px 15px 15px;
+        margin: 10px 0 30px 0;
+
+        &__desc {
+          padding-top: 20px;
+          padding-bottom: 30px;
+        }
+      }
+    }
   }
 }

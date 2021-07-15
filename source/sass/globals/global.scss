@@ -28,12 +28,15 @@ a {
   cursor: pointer;
 }
 
-
 img {
   max-width: 100%;
   height: auto;
 }
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
   font-weight: normal;
   font-size: 100%;
   margin: 0;
@@ -48,11 +51,25 @@ input {
   @include wrapper(column, nowrap, space-between, center, 940px, 100%);
 }
 
+// .swiper-container {
+//   width: 1180px;
+//   height: 50px;
+// }
+
 // .accent-btn:hover {
 //   @include button-hover($btn-hover);
 // }
 
 // Tablet: 1199px
-// @media (max-width: $table-width) {
-//   @include wrapper(column, nowrap, space-between, center, 760px, auto);
-// }
+@media (max-width: $table-width) {
+  .wrapper {
+    @include wrapper(column, nowrap, space-between, center, 760px, 100%);
+  }
+}
+
+// Mobile: 767px
+@media (max-width: $mobile-width) {
+  .wrapper {
+    @include wrapper(column, nowrap, space-between, center, 320px, 100%);
+  }
+}

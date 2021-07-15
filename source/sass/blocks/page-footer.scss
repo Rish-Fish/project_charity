@@ -1,28 +1,28 @@
 .page-footer,
 .footer {
-  @include section-wrap (1440px);
+  @include section-wrap(1440px);
   background-color: $bg-black;
   margin-top: 104px;
   padding: 40px 0 52px 0;
-  
+
   &__bottom-wrap,
   .bottom-wrap {
-    @include flex (row, wrap, space-between, flex-start);
+    @include flex(row, wrap, space-between, flex-start);
     width: 100%;
     // display: flex;
     // flex-direction: row;
 
-    &__left-side, 
+    &__left-side,
     .left-side {
-      @include font (12px, 500, 18px, $text-light, start);
+      @include font(12px, 500, 18px, $text-light, start);
       flex-direction: column;
 
       &__desc {
-        padding-top: 10px;  
+        padding-top: 10px;
       }
       &__social-wrap,
       .social-wrap {
-        @include flex (row, wrap, space-between, flex-start);
+        @include flex(row, wrap, space-between, flex-start);
         .social-img {
           // fill: #fff;
           // color: #fff;
@@ -30,26 +30,44 @@
         width: 50px;
       }
     }
-    
+
     &__right-side,
     .right-side {
-      @include flex (column, wrap, flex-start, flex-end);
-      
-      &__wrap, 
+      @include flex(column, wrap, flex-start, flex-end);
+
+      &__wrap,
       .wrap {
         min-width: 175px;
         text-align: end;
-        @include font (12px, 500, 18px, $text-light, end);
+        @include font(12px, 500, 18px, $text-light, end);
 
         &__info {
-          @include font (12px, 500, 18px, $text-light, end);
+          @include font(12px, 500, 18px, $text-light, end);
         }
       }
     }
     &__right-side .wrap:last-child {
       padding-top: 10px;
     }
-
   }
+}
 
+// Tablet: 1199px
+@media (max-width: $table-width) {
+  .page-footer {
+    @include section-wrap(1440px);
+    // padding: 100px 0 50px 0;
+    margin: 104px 15px 15px 0;
+    width: 100%;
+
+    &__bottom-wrap,
+    .bottom-wrap {
+      // width: auto;
+      max-width: 730px;
+    }
+  }
+}
+
+// Mobile: 767px
+@media (max-width: $mobile-width) {
 }

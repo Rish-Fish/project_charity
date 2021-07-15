@@ -1,66 +1,56 @@
 .block-donate {
-  @include section-wrap (1440px);
+  @include section-wrap(1440px);
   margin-top: 100px;
-  
+
   &__wrap,
   .wrap {
     width: 100%;
-    @include flex (row, nowrap, space-between, flex-start);
-  
+    @include flex(row, nowrap, space-between, flex-start);
+
     &__text,
     .text {
       width: 60%;
       max-width: 440px;
       &__head-donate {
-        @include font (24px, 700, 29px, $text-main, left);
+        @include font(24px, 700, 29px, $text-main, left);
         margin-bottom: 24px;
       }
       &__desc-donate {
-        @include font (16px, 400, 22px, $text-main, left);
+        @include font(16px, 400, 22px, $text-main, left);
       }
     }
 
     &__form,
     .form {
       width: 40%;
-      @include flex (column, nowrap, center, center);
+      @include flex(column, nowrap, center, center);
       border: 1px solid $bg-stats;
       border-radius: 4px;
       box-shadow: $shadow-input;
-      // position: absolute;
-      // left: 59.49%;
       padding-top: 30px;
       padding-left: 26px;
       padding-right: 26px;
-      padding-bottom: 30px;
+      padding-bottom: 40px;
       background: $text-light;
-      
-    
+
       &__box,
       .box {
-        @include flex (column, nowrap, center, flex-start);
+        @include flex(column, nowrap, center, flex-start);
         width: 332px;
-        
+
         &__item {
-          @include font (14px, 700, 17px, $text-main, left);
-          // flex-direction: column;
+          @include font(14px, 700, 17px, $text-main, left);
           margin-top: 16px;
           margin-bottom: 4px;
         }
-        &__input, 
+        &__input,
         .input {
           border: $border-light;
           border-radius: 4px;
-          // padding-left: 5px;
           margin: 0;
-          // width: 332px;
           height: 40px;
           width: 330px;
           text-indent: 5px;
-
-          // &::placeholder {
-          //   padding-left: 5px;
-          // }
         }
         &__select,
         .select {
@@ -74,32 +64,18 @@
           .wrap-t {
             border: $border-light;
             border-radius: 4px 0 0 4px;
-            @include font (16px, 700, 19px, $text-main, center);
+            @include font(16px, 700, 19px, $text-main, center);
             padding: 8px 16px 10px;
             margin: 0;
-          //   &__tap {
-          //   }
+            //   &__tap {
+            //   }
           }
-          &__input, 
+          &__input,
           .input {
             width: 100%;
             border: $border-light;
             border-radius: 0 4px 4px 0;
-            // padding: 0 0 0 10px;
-            // text-indent:5px;
-
-
-          // &::placeholder {
-          //   padding-left: 3px;
-          // }
           }
-          // &__input, 
-          // .input {
-          //   .accent-btn {
-          //     background: $shadow-link;
-          //     border: 1px solid green;
-          //   }
-          // }
         }
 
         &__accent-btn,
@@ -115,24 +91,104 @@
 
           &__icon-white-heart {
             margin-left: 9px;
-          }       
+          }
         }
         .accent-btn:hover {
           @include button-hover-active($btn-hover);
         }
         .accent-btn:active {
-          @include button-hover-active ($btn-active);
+          @include button-hover-active($btn-active);
           transform: scale(1);
         }
       }
     }
-    
-    .input:valid .box-accent-btn {
-        background: blue;
-        border: 1px solid blue;
-        @include button(15px, 15px, blue);
-      
-    }
 
+    .input:valid .box-accent-btn {
+      background: blue;
+      border: 1px solid blue;
+      @include button(15px, 15px, blue);
+    }
+  }
+}
+
+// Tablet: 1199px
+@media (max-width: $table-width) {
+  .block-donate {
+    @include section-wrap(730px);
+    margin-top: 70px;
+    &__wrap,
+    .wrap {
+      width: 100%;
+      @include flex(column, nowrap, center, center);
+
+      &__text,
+      .text {
+        width: 100%;
+        max-width: 600px;
+        &__head-donate {
+          @include font(24px, 700, 29px, $text-main, center);
+          // margin-bottom: 24px;
+        }
+        &__desc-donate {
+          // @include font(16px, 400, 22px, $text-main, center);
+        }
+      }
+
+      &__form,
+      .form {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 40px;
+        // align-items: center;
+        // text-align: center;
+        // justify-content: center;
+
+        &__box,
+        .box {
+          @include flex(column, nowrap, center, center);
+          width: 600px;
+          // padding-left: 50%;
+
+          &__item {
+            @include font(14px, 700, 17px, $text-main, left);
+            // margin-top: 16px;
+            // margin-bottom: 4px;
+            // align-items: flex-start;
+          }
+          &__input,
+          .input {
+            // border: $border-light;
+            // border-radius: 4px;
+            // margin: 0;
+            // height: 40px;
+            // width: 400px;
+            // text-indent: 5px;
+          }
+          &__select,
+          .select {
+            // display: flex;
+            // width: 100%;
+            // width: 400px;
+            // height: 42px;
+            // padding: 0;
+
+            &__wrap-t,
+            .wrap-t {
+              // border: $border-light;
+              // border-radius: 4px 0 0 4px;
+              // @include font(16px, 700, 19px, $text-main, center);
+              // padding: 8px 16px 10px;
+              // margin: 0;
+            }
+            &__input,
+            .input {
+              // width: 100%;
+              // border: $border-light;
+              // border-radius: 0 4px 4px 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
