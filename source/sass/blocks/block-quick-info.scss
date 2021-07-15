@@ -5,3 +5,14 @@
   @include font(18px, 400, 22px, $text-main, center);
   padding: 38px 0;
 }
+
+// Mobile: 767px
+@media (max-width: $mobile-width) {
+  .block-quick-info {
+    @include section-wrap (767px);
+    padding: 38px 15px;
+    // max-width: 310px;
+    width: auto;
+    // margin: 15px;
+  }
+}

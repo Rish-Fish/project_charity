@@ -61,18 +61,12 @@
       margin-left: 38px;
       display: flex;
       height: 32px;
-      // &:hover {
-      //     background: $btn-hover;
-      //     transition: all 0.3s ease-in-out;
-      //     transform: scale(1.1);
-      // }
 
       &__icon-white-heart {
         margin-left: 9px;
       }
     }
   }
-  // }
 
   // .page-header__block-hero,
   &__block-hero,
@@ -145,7 +139,7 @@
       background-image: url("../img/hero@2x.jpg");
       background-size: 767px auto;
       // width: 1440px;
-      height: 467px;
+      height: 360px;
     }
     .navigation {
       display: none;
@@ -155,10 +149,27 @@
     &__block-hero,
     .block-hero {
       // margin-top: 198px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
 
       &__head {
-        margin-top: 100px;
-        @include font(36px, 700, 40px, $text-light, center);
+        margin-top: 50px;
+        @include font(30px, 700, 35px, $text-light, center);
+      }
+      &__btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 24px;
+
+        .accent-btn {
+          // @include button(29px, 29px, $bg-green);
+        }
+        .accent-btn__light {
+          // @include button(24px, 24px, $bg-btn-light);
+          margin: 10px 0 0;
+        }
       }
     }
   }
