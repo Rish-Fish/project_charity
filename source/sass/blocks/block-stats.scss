@@ -21,11 +21,11 @@
     &__item,
     .item {
       &__head {
-        @include font(24px, 700, 29px, $text-main, flex-start);
+        @include font(24px, 700, 29px, $text-main, left);
       }
 
       &__desc {
-        @include font(16px, 500, 19px, $text-main, flex-start);
+        @include font(16px, 500, 19px, $text-main, left);
       }
     }
   }

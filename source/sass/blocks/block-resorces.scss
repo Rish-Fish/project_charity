@@ -11,11 +11,11 @@
     .desc {
       width: 70%;
       &__head {
-        @include font(12px, 700, 14px, $text-subscribe-btn, start);
+        @include font(12px, 700, 14px, $text-subscribe-btn, left);
         text-transform: uppercase;
       }
       &__text {
-        @include font(20px, 700, 24px, $text-main, start);
+        @include font(20px, 700, 24px, $text-main, left);
       }
     }
     &__accent-btn {
@@ -40,10 +40,10 @@
       max-width: 232px;
 
       &__head {
-        @include font(18px, 700, 22px, $text-main, flex-start);
+        @include font(18px, 700, 22px, $text-main, left);
       }
       &__desc {
-        @include font(16px, 400, 22px, $text-main, flex-start);
+        @include font(16px, 400, 22px, $text-main, left);
         padding-top: 8px;
         padding-bottom: 16px;
       }

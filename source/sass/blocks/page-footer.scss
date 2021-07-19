@@ -14,7 +14,7 @@
 
     &__left-side,
     .left-side {
-      @include font(12px, 500, 18px, $text-light, start);
+      @include font(12px, 500, 18px, $text-light, left);
       flex-direction: column;
 
       &__desc {
@@ -39,10 +39,10 @@
       .wrap {
         min-width: 175px;
         text-align: end;
-        @include font(12px, 500, 18px, $text-light, end);
+        @include font(12px, 500, 18px, $text-light, right);
 
         &__info {
-          @include font(12px, 500, 18px, $text-light, end);
+          @include font(12px, 500, 18px, $text-light, right);
         }
       }
     }
