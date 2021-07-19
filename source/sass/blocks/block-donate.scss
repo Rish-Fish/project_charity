@@ -27,10 +27,7 @@
       border: 1px solid $bg-stats;
       border-radius: 4px;
       box-shadow: $shadow-input;
-      padding-top: 30px;
-      padding-left: 26px;
-      padding-right: 26px;
-      padding-bottom: 40px;
+      padding: 30px 26px 40px;
       background: $text-light;
 
       &__box,
@@ -149,8 +146,9 @@
     }
   }
 }
-// Mobile: max-768px
-@media (max-width: $mobile-width) {
+
+// Mobile: 380px-767px
+@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
   .block-donate {
     @include section-wrap(730px);
     margin-top: 70px;
@@ -175,14 +173,16 @@
       &__form,
       .form {
         width: 100%;
-        max-width: 600px;
+        max-width: 370px;
         margin-top: 40px;
+        padding: 30px 0 40px;
+        margin-left: 0;
 
 
         &__box,
         .box {
           @include flex(column, nowrap, center, center);
-          width: 600px;
+          width: 370px;
 
           &__item {
             @include font(14px, 700, 17px, $text-main, left);
@@ -210,3 +210,68 @@
     }
   }
 }
+
+// Mobile: 320px-380px
+@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
+  .block-donate {
+    @include section-wrap(380px);
+    margin-top: 70px;
+    &__wrap,
+    .wrap {
+      width: 100%;
+      @include flex(column, nowrap, center, center);
+
+      &__text,
+      .text {
+        width: 100%;
+        max-width: 320px;
+        &__head-donate {
+          @include font(24px, 700, 29px, $text-main, center);
+          // margin-bottom: 24px;
+        }
+        &__desc-donate {
+          // @include font(16px, 400, 22px, $text-main, center);
+        }
+      }
+
+      &__form,
+      .form {
+        width: 100%;
+        max-width: 320px;
+        margin-top: 40px;
+        padding: 30px 0 40px;
+        margin-left: 0;
+
+
+        &__box,
+        .box {
+          @include flex(column, nowrap, center, center);
+          width: 320px;
+
+          &__item {
+            @include font(14px, 700, 17px, $text-main, left);
+
+          }
+          &__input,
+          .input {
+
+          }
+          &__select,
+          .select {
+
+
+            &__wrap-t,
+            .wrap-t {
+
+            }
+            &__input,
+            .input {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
