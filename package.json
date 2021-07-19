@@ -2,7 +2,7 @@
   "name": "charity",
   "version": "1.0.0",
   "description": "Проект: Charity",
-  "homepage": "https://rish-fish.github.io/test_project_charity/",
+  "homepage": "https://rish-fish.github.io/project_charity/",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
