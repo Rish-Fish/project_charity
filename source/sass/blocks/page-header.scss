@@ -96,8 +96,10 @@
   }
 }
 
-// Tablet: 1199px
-@media (max-width: $table-width) {
+
+
+// Tablet: 1024px-1440px
+@media (min-width: $table-width) and (max-width: $table-big-width) {
   .page-header {
     @include section-wrap(1199px);
 
@@ -108,8 +110,34 @@
       height: 566px;
       background-position: center;
     }
-    // Tablet: 1199px
-    // @include wrapper(column, nowrap, space-between, center, 760px, auto);
+
+    .navigation {
+      .side {
+        margin: 0 10px 0 10px;
+      }
+      &__logo {
+        margin: 0 15px 0 15px;
+      }
+      &__accent-btn,
+      .accent-btn {
+        margin: 0 10px 0 15px;
+      }
+    }
+  }
+}
+
+// Tablet: 768px-1023px
+@media (max-width: $table-min-width) {
+  .page-header {
+    @include section-wrap(1199px);
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero@2x.jpg");
+      background-size: 1199px auto;
+      // width: 1440px;
+      height: 566px;
+      background-position: center;
+    }
 
     .navigation {
       margin: 0 10px 0 10px;
