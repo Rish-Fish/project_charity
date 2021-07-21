@@ -1,31 +1,37 @@
 .block-stats {
   @include section-wrap(940px);
-  background-color: $bg-stats;
-  border-radius: 8px;
 
-  &__wrap,
-  .wrap {
-    @include flex(row, wrap, space-between, center);
-    width: 100%;
-    margin-top: 36px;
-    margin-bottom: 42px;
+  // align-items: center;
+  margin: 0 auto;
 
-    &__item:first-child {
-      margin-left: 64px;
-    }
+  .wrapper {
+    // align-items: center;
+    background-color: $bg-stats;
+    border-radius: 8px;
+    &__wrap,
+    .wrap {
+      @include flex(row, wrap, space-between, center);
+      width: 100%;
+      margin-top: 36px;
+      margin-bottom: 42px;
 
-    &__item:last-child {
-      margin-right: 64px;
-    }
-
-    &__item,
-    .item {
-      &__head {
-        @include font(24px, 700, 29px, $text-main, left);
+      &__item:first-child {
+        margin-left: 64px;
       }
 
-      &__desc {
-        @include font(16px, 500, 19px, $text-main, left);
+      &__item:last-child {
+        margin-right: 64px;
+      }
+
+      &__item,
+      .item {
+        &__head {
+          @include font(24px, 700, 29px, $text-main, left);
+        }
+
+        &__desc {
+          @include font(16px, 500, 19px, $text-main, left);
+        }
       }
     }
   }

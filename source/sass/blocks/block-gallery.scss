@@ -1,11 +1,14 @@
 .block-gallery {
-  @include section-wrap(1440px);
+  @include section-wrap(100%);
+
   @include bg-img("../img/gallery@1x.jpg");
+  background-size: 100% 100%;
+  height: 390px;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/gallery@2x.png");
-    background-size: 1440px auto;
-    height: 382px;
+    background-size: cover;
+    height: 390px;
   }
   margin-top: 70px;
 }

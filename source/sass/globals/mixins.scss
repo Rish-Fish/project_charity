@@ -26,7 +26,7 @@
 @mixin section-wrap ($max-width) {
   max-width: $max-width;
   width: 100%;
-  margin: 0 auto;
+  // margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,9 +55,9 @@
   height: 40px;
   align-items: center;
   cursor: pointer;
-  
+
   @include font(16px, 700, 19px, $text-light, center);
-  
+
   background: $bg-btn;
 }
 
