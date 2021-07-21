@@ -106,7 +106,6 @@
   }
 }
 
-
 // Tablet: 768px-1440px
 @media (max-width: $table-width) {
   .block-donate {
@@ -139,8 +138,6 @@
           &__item {
             @include font(14px, 700, 17px, $text-main, left);
           }
-
-
         }
       }
     }
@@ -178,7 +175,6 @@
         padding: 30px 0 40px;
         margin-left: 0;
 
-
         &__box,
         .box {
           @include flex(column, nowrap, center, center);
@@ -186,23 +182,17 @@
 
           &__item {
             @include font(14px, 700, 17px, $text-main, left);
-
           }
           &__input,
           .input {
-
           }
           &__select,
           .select {
-
-
             &__wrap-t,
             .wrap-t {
-
             }
             &__input,
             .input {
-
             }
           }
         }
@@ -242,7 +232,6 @@
         padding: 30px 0 40px;
         margin-left: 0;
 
-
         &__box,
         .box {
           @include flex(column, nowrap, center, center);
@@ -250,23 +239,17 @@
 
           &__item {
             @include font(14px, 700, 17px, $text-main, left);
-
           }
           &__input,
           .input {
-
           }
           &__select,
           .select {
-
-
             &__wrap-t,
             .wrap-t {
-
             }
             &__input,
             .input {
-
             }
           }
         }
@@ -274,4 +257,3 @@
     }
   }
 }
-

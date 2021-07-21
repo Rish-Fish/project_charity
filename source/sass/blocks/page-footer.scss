@@ -1,6 +1,6 @@
 .page-footer,
 .footer {
-  @include section-wrap(1440px);
+  @include section-wrap(100%);
   background-color: $bg-black;
   margin-top: 104px;
   padding: 40px 0 52px 0;
