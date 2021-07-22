@@ -73,7 +73,7 @@ input {
 }
 
 // Mobile: 320px-500px
-@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
+@media (max-width: $mobile-middle-width) {
   .wrapper {
     @include wrapper(column, nowrap, space-between, center, 320px, 100%);
   }

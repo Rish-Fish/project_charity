@@ -101,12 +101,16 @@
 // Tablet: 1024px-1440px
 @media (min-width: $table-width) and (max-width: $table-big-width) {
   .page-header {
-    @include section-wrap(1199px);
+    @include section-wrap(100%);
+
+    @include bg-img("../img/hero@1x.jpg");
+    background-size: cover;
+    height: 566px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/hero@2x.jpg");
-      background-size: 1199px auto;
-      // width: 1440px;
+      background-size: cover;
+      width: 100%;
       height: 566px;
       background-position: center;
     }
@@ -129,12 +133,16 @@
 // Tablet: 768px-1023px
 @media (max-width: $table-min-width) {
   .page-header {
-    @include section-wrap(1199px);
+    @include section-wrap(100%);
+
+    @include bg-img("../img/hero@1x.jpg");
+    background-size: cover;
+    height: 566px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/hero@2x.jpg");
-      background-size: 1199px auto;
-      // width: 1440px;
+      background-size: cover;
+      width: 100%;
       height: 566px;
       background-position: center;
     }
@@ -154,62 +162,19 @@
     }
   }
 }
-
-// Mobile: 380px-767px
-@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
-  .page-header {
-    @include section-wrap(767px);
-
-    // @include bg-img("../img/hero@1x.jpg");
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero@2x.jpg");
-      background-size: 767px auto;
-      // width: 1440px;
-      height: 360px;
-    }
-    .navigation {
-      display: none;
-    }
-    &__block-hero,
-    .block-hero {
-      margin-top: 30px;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-
-      &__head {
-        margin-top: 50px;
-        @include font(30px, 700, 35px, $text-light, center);
-      }
-      &__btn-wrapper {
-        display: flex;
-        flex-direction: column;
-        margin-top: 24px;
-
-        .accent-btn {
-          // @include button(29px, 29px, $bg-green);
-        }
-        .accent-btn__light {
-          // @include button(24px, 24px, $bg-btn-light);
-          margin: 10px 0 0;
-        }
-      }
-    }
-  }
-}
 // Mobile: 500px-767px
 @media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
   .page-header {
-    @include section-wrap(767px);
+    @include section-wrap(100%);
 
-    // @include bg-img("../img/hero@1x.jpg");
+    @include bg-img("../img/hero@1x.jpg");
+    background-size: cover;
+    height: 360px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/hero@2x.jpg");
-      background-size: 767px auto;
-      // width: 1440px;
+      background-size: cover;
+      width: 100%;
       height: 360px;
     }
     .navigation {
@@ -248,18 +213,21 @@
     }
   }
 }
-// Mobile: 320px-500px
-@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
-  .page-header {
-    @include section-wrap(767px);
 
-    // @include bg-img("../img/hero@1x.jpg");
+// Mobile: 320px-500px
+@media (max-width: $mobile-middle-width) {
+  .page-header {
+    @include section-wrap(100%);
+
+    @include bg-img("../img/hero@1x.jpg");
+    background-size: cover;
+    height: 350px;
 
     @media (min-resolution: $retina-dppx) {
       background-image: url("../img/hero@2x.jpg");
-      background-size: 767px auto;
+      background-size: cover;
       // width: 1440px;
-      height: 360px;
+      height: 300px;
     }
     .navigation {
       display: none;

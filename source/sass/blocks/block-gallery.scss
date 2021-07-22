@@ -8,37 +8,79 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/gallery@2x.png");
     background-size: cover;
-    height: 390px;
+    height: 400px;
   }
   margin-top: 70px;
 }
 // Big-desktop from 1500px
 @media (min-width: 1500px) {
   .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
     background-size: cover;
     height: 520px;
+
+    .block-gallery {
+      background-size: cover;
+      height: 520px;
+    }
   }
 }
 
 // Tablet: 1024px-1440px
 @media (min-width: $table-width) and (max-width: $table-big-width) {
   .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
+    background-size: cover;
+    height: 300px;
     // @include section-wrap(100%);
     @media (min-resolution: $retina-dppx) {
       background-size: cover;
       height: 300px;
     }
-    margin-top: 70px;
+    // margin-top: 70px;
   }
 }
 // Tablet: 768px-1023px
 @media (max-width: $table-min-width) {
   .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
+    background-size: cover;
+    height: 300px;
     // @include section-wrap(100%);
     @media (min-resolution: $retina-dppx) {
       background-size: cover;
       height: 300px;
     }
-    margin-top: 70px;
+    // margin-top: 70px;
+  }
+}
+
+// Mobile: 500px-767px
+@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
+  .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
+    background-size: cover;
+    height: 300px;
+    // @include section-wrap(100%);
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
+      height: 300px;
+    }
+    // margin-top: 70px;
+  }
+}
+
+// Mobile: 320px-500px
+@media (max-width: $mobile-middle-width) {
+  .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
+    background-size: cover;
+    height: 300px;
+    // @include section-wrap(100%);
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
+      height: 300px;
+    }
+    // margin-top: 70px;
   }
 }

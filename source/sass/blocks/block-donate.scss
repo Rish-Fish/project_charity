@@ -110,6 +110,7 @@
 @media (min-width: $table-width) and (max-width: $table-big-width) {
   .block-donate {
     @include section-wrap(100%);
+
     margin-top: 70px;
     &__wrap,
     .wrap {
@@ -181,10 +182,10 @@
   }
 }
 
-// Mobile: 380px-767px
+// Mobile: 500px-767px
 @media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
   .block-donate {
-    @include section-wrap(730px);
+    @include section-wrap(100%);
     margin-top: 70px;
     &__wrap,
     .wrap {
@@ -194,7 +195,7 @@
       &__text,
       .text {
         width: 100%;
-        max-width: 600px;
+        max-width: 100%;
         &__head-donate {
           @include font(24px, 700, 29px, $text-main, center);
           // margin-bottom: 24px;
@@ -238,10 +239,10 @@
   }
 }
 
-// Mobile: 320px-380px
-@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
+// Mobile: 320px-500px
+@media (max-width: $mobile-middle-width) {
   .block-donate {
-    @include section-wrap(380px);
+    @include section-wrap(100%);
     margin-top: 70px;
     &__wrap,
     .wrap {
@@ -253,7 +254,7 @@
         width: 100%;
         max-width: 320px;
         &__head-donate {
-          @include font(24px, 700, 29px, $text-main, center);
+          @include font(24px, 700, 29px, $text-main, left);
           // margin-bottom: 24px;
         }
         &__desc-donate {
@@ -264,32 +265,83 @@
       &__form,
       .form {
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
         margin-top: 40px;
         padding: 30px 0 40px;
         margin-left: 0;
 
         &__box,
         .box {
-          @include flex(column, nowrap, center, center);
-          width: 320px;
+          @include flex(column, nowrap, center, flex-start);
+          width: 332px;
 
           &__item {
             @include font(14px, 700, 17px, $text-main, left);
+            margin-top: 16px;
+            margin-bottom: 4px;
           }
           &__input,
           .input {
+            border: $border-light;
+            border-radius: 4px;
+            margin: 0;
+            height: 40px;
+            width: 270px;
+            text-indent: 5px;
           }
           &__select,
           .select {
+            display: flex;
+            width: 100%;
+            width: 270px;
+            height: 42px;
+            padding: 0;
+
             &__wrap-t,
             .wrap-t {
+              border: $border-light;
+              border-radius: 4px 0 0 4px;
+              @include font(16px, 700, 19px, $text-main, center);
+              padding: 8px 16px 10px;
+              margin: 0;
             }
             &__input,
             .input {
+              width: 100%;
+              border: $border-light;
+              border-radius: 0 4px 4px 0;
             }
           }
+
+          &__accent-btn,
+          .accent-btn {
+            @include button(15px, 15px, $bg-green);
+            margin-left: 38px;
+            display: flex;
+            height: 40px;
+            width: 120px;
+            margin-top: 26px;
+            margin-left: 0;
+            justify-content: center;
+
+            &__icon-white-heart {
+              margin-left: 9px;
+            }
+          }
+          .accent-btn:hover {
+            @include button-hover-active($btn-hover);
+          }
+          .accent-btn:active {
+            @include button-hover-active($btn-active);
+            transform: scale(1);
+          }
         }
+      }
+
+      .input:valid .box-accent-btn {
+        background: blue;
+        border: 1px solid blue;
+        @include button(15px, 15px, blue);
       }
     }
   }

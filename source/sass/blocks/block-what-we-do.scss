@@ -305,9 +305,9 @@
 }
 
 // Mobile: 320px-500px
-@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
+@media (max-width: $mobile-middle-width) {
   .block-what-we-do {
-    @include section-wrap(767px);
+    @include section-wrap(100%);
     &__head-wrap,
     .head-wrap {
       @include flex(column, wrap, center, center);
@@ -343,7 +343,7 @@
 
       &__article-wrap,
       .article-wrap {
-        width: 100%;
+        width: auto;
         position: relative;
         padding: 126px 15px 15px 15px;
         margin: 40px 0 30px 0;

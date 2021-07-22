@@ -24,17 +24,14 @@
   }
   &__content-wrap,
   .content-wrap {
-    @include flex(row, nowrap, space-between, center);
+    @include flex(row, wrap, space-between, center);
     width: 100%;
     margin-bottom: 120px;
 
     &__article-wrap,
     .article-wrap {
       @include flex(column, wrap, space-between, flex-start);
-      padding-top: 26px;
-      padding-left: 24px;
-      padding-right: 24px;
-      padding-bottom: 24px;
+      padding: 26px 24px 24px;
       border: $border-light;
       border-radius: 8px;
       max-width: 232px;
@@ -51,6 +48,7 @@
       &__accent-btn {
         @include button(20px, 20px, $bg-green);
         align-self: center;
+        // width: 70%;
       }
     }
   }
@@ -64,16 +62,78 @@
 }
 
 // Tablet: 1024px-1440px
-@media (min-width: $table-width) and (max-width: $table-big-width) {
-}
+// @media (min-width: $table-width) and (max-width: $table-big-width) {
+//   .block-resources {
+//     @include section-wrap(100%);
+//     &__head-wrap,
+//     .head-wrap {
+//       @include flex(row, nowrap, space-between, center);
+//       width: 100%;
+//       padding: 120px 0 88px 0;
+
+//       &__desc,
+//       .desc {
+//         width: 70%;
+//         &__head {
+//           @include font(12px, 700, 14px, $text-subscribe-btn, left);
+//           text-transform: uppercase;
+//         }
+//         &__text {
+//           @include font(20px, 700, 24px, $text-main, left);
+//         }
+//       }
+//       &__accent-btn {
+//         @include button(29px, 29px, $bg-green);
+//       }
+//     }
+//     &__content-wrap,
+//     .content-wrap {
+//       @include flex(row, nowrap, space-between, center);
+//       width: 100%;
+//       margin-bottom: 120px;
+
+//       &__article-wrap,
+//       .article-wrap {
+//         @include flex(column, wrap, space-between, flex-start);
+//         // position: relative;
+//         padding: 26px 24px 24px;
+//         border: $border-light;
+//         border-radius: 8px;
+//         max-width: 220px;
+
+//         &__head {
+//           @include font(18px, 700, 22px, $text-main, left);
+//           height: 44px;
+//         }
+//         &__desc {
+//           @include font(16px, 400, 22px, $text-main, left);
+//           padding-top: 8px;
+//           padding-bottom: 16px;
+//         }
+
+//         &__accent-btn {
+//           @include button(20px, 20px, $bg-green);
+//           align-self: center;
+//         }
+//       }
+//     }
+//     .accent-btn:hover {
+//       @include button-hover-active($btn-hover);
+//     }
+//     .accent-btn:active {
+//       @include button-hover-active($btn-active);
+//       transform: scale(0.8);
+//     }
+//   }
+// }
 
 // Tablet: 768px-1023px
 @media (max-width: $table-width) {
   .block-resources {
-    @include section-wrap(1199px);
+    @include section-wrap(100%);
     &__head-wrap,
     .head-wrap {
-      width: auto;
+      width: 100%;
       padding: 100px 0 50px 0;
       margin: 0 15px;
 
@@ -86,14 +146,15 @@
     }
     &__content-wrap,
     .content-wrap {
+      @include flex(row, wrap, space-between, flex-start);
+
       width: 100%;
       margin-bottom: 50px;
-      justify-content: space-around;
+      // justify-content: space-around;
 
       &__article-wrap,
       .article-wrap {
         width: 25%;
-        // position: relative;
         padding: 25px 15px 15px 15px;
         margin: 10px 0 30px 0;
 
@@ -128,7 +189,7 @@
     }
     &__content-wrap,
     .content-wrap {
-      @include flex(row, wrap, space-between, center);
+      @include flex(column, wrap, space-between, center);
       width: 100%;
       margin-bottom: 50px;
       justify-content: space-around;
@@ -164,63 +225,64 @@
 }
 
 // Mobile: 320px-500px
-@media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
-}
-.block-resources {
-  @include section-wrap(100%);
-  &__head-wrap,
-  .head-wrap {
-    @include flex(column, nowrap, space-between, center);
-    @include font(12px, 700, 14px, $text-subscribe-btn, center);
-    width: auto;
-    padding: 70px 0 50px;
-    margin: 0 15px;
+@media (max-width: $mobile-middle-width) {
+  .block-resources {
+    @include section-wrap(100%);
 
-    &__desc,
-    .desc {
+    &__head-wrap,
+    .head-wrap {
+      @include flex(column, nowrap, space-between, center);
       @include font(12px, 700, 14px, $text-subscribe-btn, center);
-
-      width: 100%;
+      width: auto;
+      padding: 70px 0 50px;
       margin: 0 15px;
-    }
-    &__accent-btn {
-      margin-top: 35px;
-      @include button(29px, 29px, $bg-green);
-      width: 90%;
-    }
-  }
-  &__content-wrap,
-  .content-wrap {
-    @include flex(column, wrap, space-between, center);
-    width: 100%;
-    margin-bottom: 50px;
-    justify-content: space-around;
 
-    // &__article-wrap--first {
-    //   max-width: 200px;
-    // }
+      &__desc,
+      .desc {
+        @include font(12px, 700, 14px, $text-subscribe-btn, center);
 
-    &__article-wrap,
-    .article-wrap {
-      max-width: 280px;
-      width: 100%;
-      position: relative;
-      // padding: 126px 15px 15px 15px;
-      margin: 15px 0 30px 0;
-
-      &__desc {
-        padding-top: 0;
-        padding-bottom: 30px;
+        width: 100%;
+        margin: 0 15px;
       }
       &__accent-btn {
-        @include button(20px, 20px, $bg-green);
-        align-self: center;
+        margin-top: 35px;
+        @include button(29px, 29px, $bg-green);
         width: 90%;
       }
     }
-    // .article-wrap--last {
-    //   max-width: 350px;
-    //   width: 100%;
-    // }
+    &__content-wrap,
+    .content-wrap {
+      @include flex(column, wrap, space-between, center);
+      width: 100%;
+      margin-bottom: 50px;
+      justify-content: space-around;
+
+      // &__article-wrap--first {
+      //   max-width: 200px;
+      // }
+
+      &__article-wrap,
+      .article-wrap {
+        max-width: 280px;
+        width: 100%;
+        position: relative;
+        // padding: 126px 15px 15px 15px;
+        margin: 15px 0 30px 0;
+
+        &__desc {
+          padding-top: 0;
+          padding-bottom: 30px;
+        }
+        &__accent-btn {
+          @include button(20px, 20px, $bg-green);
+          align-self: center;
+          width: 90%;
+        }
+      }
+      // .article-wrap--last {
+      //   max-width: 350px;
+      //   width: 100%;
+      // }
+    }
   }
 }
