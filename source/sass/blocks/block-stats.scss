@@ -1,8 +1,8 @@
 .block-stats {
-  @include section-wrap(940px);
+  @include section-wrap(100%);
 
   // align-items: center;
-  margin: 0 auto;
+  // margin: 0 auto;
 
   .wrapper {
     // align-items: center;
@@ -15,14 +15,6 @@
       margin-top: 36px;
       margin-bottom: 42px;
 
-      &__item:first-child {
-        margin-left: 64px;
-      }
-
-      &__item:last-child {
-        margin-right: 64px;
-      }
-
       &__item,
       .item {
         &__head {
@@ -33,49 +25,64 @@
           @include font(16px, 500, 19px, $text-main, left);
         }
       }
+      &__item--first {
+        margin-left: 64px;
+        padding-left: 0;
+      }
+
+      &__item--last {
+        margin-right: 64px;
+      }
     }
   }
 }
 
-// Tablet: 1199px
-@media (max-width: $table-width) {
+// Tablet: 1024px-1440px
+@media (min-width: $table-width) and (max-width: $table-big-width) {
   .block-stats {
-    @include section-wrap(730px);
+    @include section-wrap(100%);
+  }
+}
+// Tablet: 768px-1023px
+@media (max-width: $table-min-width) {
+  .block-stats {
+    @include section-wrap(100%);
+    background-color: $bg-stats;
+    border-radius: none;
   }
 }
 
 // Mobile: 380px-767px
 @media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
   .block-stats {
-    @include section-wrap(767px);
-    // background-color: $bg-stats;
-    // border-radius: 8px;
+    @include section-wrap(100%);
+    background-color: $bg-stats;
+    border-radius: none;
 
     &__wrap,
     .wrap {
-      @include flex(column, wrap, center, center);
-      width: 100%;
+      @include flex(column, nowrap, space-between, center);
+      width: 50%;
       margin-top: 36px;
       margin-bottom: 42px;
-
-      &__item:first-child {
-        margin-left: 0px;
-      }
-
-      &__item:last-child {
-        margin-right: 0px;
-      }
-
       &__item,
       .item {
         &__head {
           @include font(24px, 700, 29px, $text-main, center);
-        margin-top: 10px;
+          margin-top: 10px;
         }
 
         &__desc {
           @include font(16px, 500, 19px, $text-main, center);
         }
+      }
+
+      &__item--first {
+        margin-left: 0;
+      }
+
+      &__item--last {
+        margin-right: 0;
       }
     }
   }
@@ -95,24 +102,24 @@
       margin-top: 36px;
       margin-bottom: 42px;
 
-      &__item:first-child {
-        margin-left: 0px;
-      }
-
-      &__item:last-child {
-        margin-right: 0px;
-      }
-
       &__item,
       .item {
         &__head {
           @include font(24px, 700, 29px, $text-main, center);
-        margin-top: 10px;
+          margin-top: 10px;
         }
 
         &__desc {
           @include font(16px, 500, 19px, $text-main, center);
         }
+      }
+
+      &__item--first {
+        margin-left: 0px;
+      }
+
+      &__item--last {
+        margin-right: 0px;
       }
     }
   }

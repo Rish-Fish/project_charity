@@ -4,7 +4,6 @@
   @include bg-img("../img/gallery@1x.jpg");
   background-size: cover;
   height: 400px;
-  // box-sizing: border-box;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/gallery@2x.png");
@@ -21,13 +20,23 @@
   }
 }
 
-// Tablet: 1199px
-@media (max-width: $table-width) {
+// Tablet: 1024px-1440px
+@media (min-width: $table-width) and (max-width: $table-big-width) {
   .block-gallery {
-    @include section-wrap(1024px);
+    // @include section-wrap(100%);
     @media (min-resolution: $retina-dppx) {
-      // background-image: url("../img/gallery@2x.png");
-      background-size: 1166px auto;
+      background-size: cover;
+      height: 300px;
+    }
+    margin-top: 70px;
+  }
+}
+// Tablet: 768px-1023px
+@media (max-width: $table-min-width) {
+  .block-gallery {
+    // @include section-wrap(100%);
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
       height: 300px;
     }
     margin-top: 70px;

@@ -54,13 +54,20 @@
         }
       }
     }
-
   }
 }
 
-// Tablet: 1199px
-@media (max-width: $table-width) {
+// Tablet: 1024px-1440px
+@media (min-width: $table-width) and (max-width: $table-big-width) {
   .block-newsletter {
-    @include section-wrap(730px);
+    @include section-wrap(1199px);
+  }
+}
+
+// Tablet: 768px-1023px
+@media (max-width: $table-min-width) {
+  .block-newsletter {
+    @include section-wrap(100%);
+    // width: 100%;
   }
 }

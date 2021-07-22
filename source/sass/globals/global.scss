@@ -51,30 +51,28 @@ input {
   @include wrapper(column, nowrap, space-between, center, 940px, 100%);
 }
 
-// .swiper-container {
-//   width: 1180px;
-//   height: 50px;
-// }
+// Tablet: 1024px-1440px
+@media (min-width: $table-width) and (max-width: $table-big-width) {
+  .wrapper {
+    @include wrapper(column, nowrap, space-between, center, 1000px, 100%);
+  }
+}
 
-// .accent-btn:hover {
-//   @include button-hover($btn-hover);
-// }
-
-// Tablet: 1199px
+// Tablet: 768px-1023px
 @media (max-width: $table-width) {
   .wrapper {
     @include wrapper(column, nowrap, space-between, center, 760px, 100%);
   }
 }
 
-// Mobile: 380px-767px
+// Mobile: 500px-767px
 @media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
   .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 370px, 100%);
+    @include wrapper(column, nowrap, space-between, center, 490px, 100%);
   }
 }
 
-// Mobile: 320px-380px
+// Mobile: 320px-500px
 @media (min-width: $mobile-min-width) and(max-width: $mobile-middle-width) {
   .wrapper {
     @include wrapper(column, nowrap, space-between, center, 320px, 100%);

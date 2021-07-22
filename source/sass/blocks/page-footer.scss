@@ -52,7 +52,7 @@
   }
 }
 
-// Tablet: 1199px
+// Tablet: 768px-1023px
 @media (max-width: $table-width) {
   .page-footer {
     @include section-wrap(1440px);
