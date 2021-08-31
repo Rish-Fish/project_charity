@@ -166,21 +166,24 @@
           </div>
           <div class="block-donate__form form">
             <form action="#" class="form__box box">
-              <label for="name" class="box__item">Name:</label>
-              <input type="text" name="donate" id="name" class="box__input input" required placeholder="Alexandra">
+              <div class="box__input-wrap">
+                <label for="name" class="box__item">Name:</label>
+                <input type="text" name="donate" id="name" class="box__input input" required placeholder="Alexandra">
 
-              <label for="email" class="box__item">Email:</label>
-              <input type="email" name="donate" id="email" class="box__input input" required
-                placeholder="myemail@gmail.com">
+                <label for="email" class="box__item">Email:</label>
+                <input type="email" name="donate" id="email" class="box__input input" required
+                  placeholder="myemail@gmail.com">
 
-              <label for="amount" class="box__item">Amount:</label>
-              <div class="box__select select">
-                <select name="amount" id="amount" class="select__wrap-t wrap-t">
-                  <option value="PHP" class="select__tap">PHP</option>
-                  <option value="EUR" class="select__tap">EUR</option>
-                  <option value="USD" class="select__tap">USD</option>
-                </select>
-                <input type="number" name="donate" id="amount" class="select__input input" required placeholder="3">
+                <label for="amount" class="box__item">Amount:</label>
+                <div class="box__select select">
+                  <select name="amount" id="amount" class="select__wrap-t wrap-t">
+                    <option value="PHP" class="select__tap">PHP</option>
+                    <option value="EUR" class="select__tap">EUR</option>
+                    <option value="USD" class="select__tap">USD</option>
+                  </select>
+                  <input type="number" name="donate" id="amount" class="select__input input" required placeholder="3">
+                </div>
+
               </div>
 
               <button type="submit" class=" box__accent-btn accent-btn">Donate
