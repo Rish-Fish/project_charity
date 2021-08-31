@@ -1,4 +1,3 @@
-.page-footer,
 .footer {
   @include section-wrap(100%);
   background-color: $bg-black;
@@ -56,10 +55,10 @@
 
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
-  .page-footer {
+  .footer {
     @include section-wrap(1440px);
     // padding: 100px 0 50px 0;
-    margin: 104px 15px 15px 0;
+    margin-top: 70px;
     width: 100%;
 
     &__bottom-wrap,
@@ -70,17 +69,23 @@
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
+  .footer {
+    margin-top: 70px;
+
+    .left-side__desc {
+      max-width: 210px;
+    }
+  }
 }
 
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
-  .page-footer,
   .footer {
     @include section-wrap(100%);
     background-color: $bg-black;
-    margin-top: 104px;
+    // margin-top: 104px;
     padding: 40px 0 52px 0;
 
     &__bottom-wrap,

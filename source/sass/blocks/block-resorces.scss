@@ -27,6 +27,7 @@
     @include flex(row, wrap, space-between, center);
     width: 100%;
     margin-bottom: 120px;
+    // flex-wrap: wrap;
 
     &__article-wrap,
     .article-wrap {
@@ -101,7 +102,7 @@
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-resources {
     @include section-wrap(100%);
@@ -123,7 +124,7 @@
     }
     &__content-wrap,
     .content-wrap {
-      @include flex(column, wrap, space-between, center);
+      @include flex(row, wrap, space-between, center);
       width: 100%;
       margin-bottom: 50px;
       justify-content: space-around;

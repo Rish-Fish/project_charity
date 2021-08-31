@@ -52,11 +52,11 @@ input {
 }
 
 // Tablet: max 1440px
-@media only screen and (max-width: $table-big-width) {
-  .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 1000px, 100%);
-  }
-}
+// @media only screen and (max-width: $table-big-width) {
+//   .wrapper {
+//     @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+//   }
+// }
 
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
@@ -65,7 +65,7 @@ input {
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .wrapper {
     @include wrapper(column, nowrap, space-between, center, 490px, 100%);

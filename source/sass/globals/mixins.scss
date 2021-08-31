@@ -20,15 +20,17 @@
   align-items: $align;
   max-width: $max-width;
   width: $width;
+  // padding: 0 3%;
 }
 
-
-@mixin section-wrap ($max-width) {
+@mixin section-wrap($max-width) {
   max-width: $max-width;
   width: 100%;
+
   // margin: 0 auto;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -61,19 +63,18 @@
   background: $bg-btn;
 }
 
-@mixin button-hover-active ($background){
+@mixin button-hover-active($background) {
   background: $background;
   transition: all 0.3s ease-in-out;
   transform: scale(1.1);
 }
-
 
 @mixin bg-img($url) {
   background-image: url($url);
   background-repeat: no-repeat;
   background-position: 0 0;
 }
-@mixin bg-img-special ($url, $width, $height, $margin-top, $padding-bottom) {
+@mixin bg-img-special($url, $width, $height, $margin-top, $padding-bottom) {
   background-image: url($url);
   background-repeat: no-repeat;
   width: $width;

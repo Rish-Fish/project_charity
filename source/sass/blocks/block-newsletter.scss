@@ -120,14 +120,14 @@
 }
 
 // Tablet: max 1024px
-@media only screen and (max-width: $table-min-width) {
+@media only screen and (max-width: $table-width) {
   .block-newsletter {
     @include section-wrap(100%);
     // width: 100%;
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-newsletter {
     @include section-wrap(100%);

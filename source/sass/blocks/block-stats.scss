@@ -45,7 +45,7 @@
 }
 
 // Tablet: max 1024px
-@media only screen and (max-width: $table-min-width) {
+@media only screen and (max-width: $table-width) {
   .block-stats {
     @include section-wrap(100%);
     background-color: $bg-stats;
@@ -53,7 +53,7 @@
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-stats {
     @include section-wrap(100%);

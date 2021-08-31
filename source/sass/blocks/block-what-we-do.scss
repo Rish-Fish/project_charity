@@ -1,11 +1,11 @@
 .block-what-we-do {
   @include section-wrap(100%);
-
+  // margin: 0 3%;
   &__head-wrap,
   .head-wrap {
     @include flex(row, nowrap, space-between, center);
     width: 100%;
-    padding: 120px 0 88px 0;
+    padding: 120px 0 88px;
 
     &__desc,
     .desc {
@@ -177,7 +177,7 @@
     .head-wrap {
       @include flex(row, nowrap, space-between, center);
       width: 100%;
-      padding: 120px 0 88px 0;
+      padding: 120px 0 88px;
 
       &__desc,
       .desc {
@@ -204,7 +204,7 @@
       .article-wrap {
         @include flex(column, wrap, space-between, flex-start);
         position: relative;
-        padding: 166px 24px 24px 24px;
+        padding: 166px 24px 24px;
         border: $border-light;
         border-radius: 8px;
         max-width: 185px;
@@ -244,10 +244,12 @@
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-what-we-do {
-    @include section-wrap(100%);
+    @include section-wrap(768px);
+    // padding: 0 3%;
+    // margin: 0 auto;
     &__head-wrap,
     .head-wrap {
       @include flex(column, nowrap, space-between, center);
@@ -294,6 +296,11 @@
           padding-top: 0;
           padding-bottom: 30px;
         }
+        &__head {
+          margin-top: 15px;
+          margin-left: 30px;
+        }
+
         &__accent-btn {
           @include button(20px, 20px, $bg-green);
           align-self: center;
@@ -336,7 +343,7 @@
     &__content-wrap,
     .content-wrap {
       width: 100%;
-      @include flex(column, nowrap, space-between, center);
+      @include flex(row, wrap, space-between, center);
 
       margin-bottom: 50px;
       justify-content: space-around;
@@ -351,13 +358,15 @@
         &__bg-image-1,
         &__bg-image-2,
         &__bg-image-3 {
-          width: 232px;
+          width: 290px;
           height: 118px;
           margin-top: -155px;
           background-position: center;
           background-size: contain;
         }
-
+        &__head {
+          text-align: center;
+        }
         &__desc {
           padding-top: 20px;
           padding-bottom: 30px;

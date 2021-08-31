@@ -1,17 +1,24 @@
-.page-header {
+.header {
   @include section-wrap(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   @include bg-img("../img/hero@1x.jpg");
   background-size: cover;
+  background-position: center center;
   height: 700px;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/hero@2x.jpg");
     background-size: cover;
+    background-position: center center;
     width: 100%;
     height: 700px;
   }
 
+  // &__navigation,
+  .header__navigation,
   .navigation {
     display: flex;
     flex-direction: row;
@@ -100,21 +107,25 @@
 
 // Tablet: max 1440px
 @media only screen and (max-width: $table-big-width) {
-  .page-header {
-    @include section-wrap(100%);
+  .header {
+    // @include section-wrap(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    @include bg-img("../img/hero@1x.jpg");
-    background-size: cover;
+    // @include bg-img("../img/hero@1x.jpg");
+    // background-size: cover;
     height: 566px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero@2x.jpg");
-      background-size: cover;
-      width: 100%;
+      // background-image: url("../img/hero@2x.jpg");
+      // background-size: cover;
+      // width: 100%;
       height: 566px;
-      background-position: center;
+      // background-position: center;
     }
 
+    .header__navigation,
     .navigation {
       .side {
         margin: 0 10px 0 10px;
@@ -131,22 +142,26 @@
 }
 
 // Tablet: max 1024px
-@media only screen and (max-width: $table-min-width) {
-  .page-header {
-    @include section-wrap(100%);
+@media only screen and (max-width: $table-width) {
+  .header {
+    // @include section-wrap(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 
-    @include bg-img("../img/hero@1x.jpg");
-    background-size: cover;
-    height: 566px;
+    // @include bg-img("../img/hero@1x.jpg");
+    // background-size: cover;
+    max-height: 460px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero@2x.jpg");
-      background-size: cover;
-      width: 100%;
-      height: 566px;
-      background-position: center;
+      // background-image: url("../img/hero@2x.jpg");
+      // background-size: cover;
+      // width: 100%;
+      max-height: 460px;
+      // background-position: center;
     }
 
+    .header__navigation,
     .navigation {
       margin: 0 10px 0 10px;
       .side {
@@ -163,21 +178,22 @@
   }
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
-  .page-header {
-    @include section-wrap(100%);
+  .header {
+    // @include section-wrap(100%);
 
-    @include bg-img("../img/hero@1x.jpg");
-    background-size: cover;
+    // @include bg-img("../img/hero@1x.jpg");
+    // background-size: cover;
     height: 360px;
 
     @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero@2x.jpg");
-      background-size: cover;
-      width: 100%;
+      // background-image: url("../img/hero@2x.jpg");
+      // background-size: cover;
+      // width: 100%;
       height: 360px;
     }
+    .header__navigation,
     .navigation {
       display: none;
     }
@@ -217,19 +233,20 @@
 
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
-  .page-header {
-    @include section-wrap(100%);
+  .header {
+    // @include section-wrap(100%);
 
-    @include bg-img("../img/hero@1x.jpg");
-    background-size: cover;
-    height: 350px;
+    // @include bg-img("../img/hero@1x.jpg");
+    // background-size: cover;
+    // height: 350px;
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/hero@2x.jpg");
-      background-size: cover;
-      // width: 1440px;
-      height: 300px;
-    }
+    // @media (min-resolution: $retina-dppx) {
+    //   // background-image: url("../img/hero@2x.jpg");
+    //   // background-size: cover;
+    //   // width: 1440px;
+    //   // height: 300px;
+    // }
+    .header__navigation,
     .navigation {
       display: none;
     }

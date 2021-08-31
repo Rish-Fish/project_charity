@@ -6,7 +6,7 @@
   padding: 38px 0;
 }
 
-// Mobile: max 767px
+// Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-quick-info {
     @include section-wrap(100%);
