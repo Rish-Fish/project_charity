@@ -6,8 +6,8 @@
   padding: 38px 0;
 }
 
-// Mobile: 500px-767px
-@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
+// Mobile: max 767px
+@media only screen and (max-width: $mobile-width) {
   .block-quick-info {
     @include section-wrap(100%);
     padding: 38px 0;
@@ -16,6 +16,7 @@
     // margin: 15px;
   }
 }
-// Mobile: 320px-500px
-@media (max-width: $mobile-middle-width) {
+
+// Mobile: max 500px
+@media only screen and (max-width: $mobile-middle-width) {
 }

@@ -61,74 +61,8 @@
   }
 }
 
-// Tablet: 1024px-1440px
-// @media (min-width: $table-width) and (max-width: $table-big-width) {
-//   .block-resources {
-//     @include section-wrap(100%);
-//     &__head-wrap,
-//     .head-wrap {
-//       @include flex(row, nowrap, space-between, center);
-//       width: 100%;
-//       padding: 120px 0 88px 0;
-
-//       &__desc,
-//       .desc {
-//         width: 70%;
-//         &__head {
-//           @include font(12px, 700, 14px, $text-subscribe-btn, left);
-//           text-transform: uppercase;
-//         }
-//         &__text {
-//           @include font(20px, 700, 24px, $text-main, left);
-//         }
-//       }
-//       &__accent-btn {
-//         @include button(29px, 29px, $bg-green);
-//       }
-//     }
-//     &__content-wrap,
-//     .content-wrap {
-//       @include flex(row, nowrap, space-between, center);
-//       width: 100%;
-//       margin-bottom: 120px;
-
-//       &__article-wrap,
-//       .article-wrap {
-//         @include flex(column, wrap, space-between, flex-start);
-//         // position: relative;
-//         padding: 26px 24px 24px;
-//         border: $border-light;
-//         border-radius: 8px;
-//         max-width: 220px;
-
-//         &__head {
-//           @include font(18px, 700, 22px, $text-main, left);
-//           height: 44px;
-//         }
-//         &__desc {
-//           @include font(16px, 400, 22px, $text-main, left);
-//           padding-top: 8px;
-//           padding-bottom: 16px;
-//         }
-
-//         &__accent-btn {
-//           @include button(20px, 20px, $bg-green);
-//           align-self: center;
-//         }
-//       }
-//     }
-//     .accent-btn:hover {
-//       @include button-hover-active($btn-hover);
-//     }
-//     .accent-btn:active {
-//       @include button-hover-active($btn-active);
-//       transform: scale(0.8);
-//     }
-//   }
-// }
-
-// Tablet: 768px-1023px
-@media (max-width: $table-width) {
+// Tablet: max 1024px
+@media only screen and (max-width: $table-width) {
   .block-resources {
     @include section-wrap(100%);
     &__head-wrap,
@@ -167,8 +101,8 @@
   }
 }
 
-// Mobile: 500px-767px
-@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
+// Mobile: max 767px
+@media only screen and (max-width: $mobile-width) {
   .block-resources {
     @include section-wrap(100%);
     &__head-wrap,
@@ -224,8 +158,8 @@
   }
 }
 
-// Mobile: 320px-500px
-@media (max-width: $mobile-middle-width) {
+// Mobile: max 500px
+@media only screen and (max-width: $mobile-middle-width) {
   .block-resources {
     @include section-wrap(100%);
 

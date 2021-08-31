@@ -26,22 +26,8 @@
   }
 }
 
-// Tablet: 1024px-1440px
-@media (min-width: $table-width) and (max-width: $table-big-width) {
-  .block-gallery {
-    @include bg-img("../img/gallery@1x.jpg");
-    background-size: cover;
-    height: 300px;
-    // @include section-wrap(100%);
-    @media (min-resolution: $retina-dppx) {
-      background-size: cover;
-      height: 300px;
-    }
-    // margin-top: 70px;
-  }
-}
-// Tablet: 768px-1023px
-@media (max-width: $table-min-width) {
+// Tablet: max 1440px
+@media only screen and (max-width: $table-big-width) {
   .block-gallery {
     @include bg-img("../img/gallery@1x.jpg");
     background-size: cover;
@@ -55,8 +41,8 @@
   }
 }
 
-// Mobile: 500px-767px
-@media (min-width: $mobile-middle-width) and (max-width: $mobile-width) {
+// Tablet: max 1024px
+@media only screen and (max-width: $table-min-width) {
   .block-gallery {
     @include bg-img("../img/gallery@1x.jpg");
     background-size: cover;
@@ -70,8 +56,23 @@
   }
 }
 
-// Mobile: 320px-500px
-@media (max-width: $mobile-middle-width) {
+// Mobile: max 767px
+@media only screen and (max-width: $mobile-width) {
+  .block-gallery {
+    @include bg-img("../img/gallery@1x.jpg");
+    background-size: cover;
+    height: 300px;
+    // @include section-wrap(100%);
+    @media (min-resolution: $retina-dppx) {
+      background-size: cover;
+      height: 300px;
+    }
+    // margin-top: 70px;
+  }
+}
+
+// Mobile: max 500px
+@media only screen and (max-width: $mobile-middle-width) {
   .block-gallery {
     @include bg-img("../img/gallery@1x.jpg");
     background-size: cover;
