@@ -27,7 +27,7 @@
           border: $border-light;
           border-radius: 4px 0px 0px 4px;
           height: 40px;
-          width: 280px;
+          max-width: 280px;
           text-indent: 5px;
         }
         &__input:valid .accent-btn {
@@ -58,74 +58,74 @@
 }
 
 // Tablet: max 1440px
-@media only screen and (max-width: $table-big-width) {
-  .block-newsletter {
-    @include section-wrap(100%);
-    .wrapper {
-      background-color: $bg-green;
-      border-radius: 8px;
+// @media only screen and (max-width: $table-big-width) {
+//   .block-newsletter {
+//     @include section-wrap(100%);
+//     .wrapper {
+//       background-color: $bg-green;
+//       border-radius: 8px;
 
-      &__bg-wrap,
-      .bg-wrap {
-        padding: 32px 0 45px 0;
+//       &__bg-wrap,
+//       .bg-wrap {
+//         padding: 32px 0 45px 0;
 
-        &__head {
-          @include font(24px, 700, 29px, $text-light, center);
-        }
-        &__desc {
-          @include font(16px, 400, 22px, $text-light, center);
-          margin-top: 8px;
-          margin-bottom: 24px;
-        }
-        &__subscribe-wrap,
-        .subscribe-wrap {
-          text-align: center;
-          display: flex;
-          justify-content: center;
+//         &__head {
+//           @include font(24px, 700, 29px, $text-light, center);
+//         }
+//         &__desc {
+//           @include font(16px, 400, 22px, $text-light, center);
+//           margin-top: 8px;
+//           margin-bottom: 24px;
+//         }
+//         &__subscribe-wrap,
+//         .subscribe-wrap {
+//           text-align: center;
+//           display: flex;
+//           justify-content: center;
 
-          &__input {
-            background: $bg-stats;
-            border: $border-light;
-            border-radius: 4px 0px 0px 4px;
-            height: 40px;
-            width: 280px;
-            text-indent: 5px;
-          }
-          &__input:valid .accent-btn {
-            background-color: rgb(208, 127, 255);
-          }
+//           &__input {
+//             background: $bg-stats;
+//             border: $border-light;
+//             border-radius: 4px 0px 0px 4px;
+//             height: 40px;
+//             max-width: 280px;
+//             text-indent: 5px;
+//           }
+//           &__input:valid .accent-btn {
+//             background-color: rgb(208, 127, 255);
+//           }
 
-          &__accent-btn,
-          .accent-btn {
-            @include button(27px, 23px, $bg-green);
-            border-radius: 0px 4px 4px 0px;
-            // color: $text-subscribe-btn;
-            @include font(16px, 700, 19.2px, $text-subscribe-btn, center);
-            background: rgba(255, 255, 255, 0.85098);
-            height: 42px;
+//           &__accent-btn,
+//           .accent-btn {
+//             @include button(27px, 23px, $bg-green);
+//             border-radius: 0px 4px 4px 0px;
+//             // color: $text-subscribe-btn;
+//             @include font(16px, 700, 19.2px, $text-subscribe-btn, center);
+//             background: rgba(255, 255, 255, 0.85098);
+//             height: 42px;
 
-            &:hover {
-              @include button-hover-active($text-link);
-              transform: scale(1);
-            }
-            &:active {
-              @include button-hover-active($btn-active);
-              transform: scale(1);
-            }
-          }
-        }
-      }
-    }
-  }
-}
+//             &:hover {
+//               @include button-hover-active($text-link);
+//               transform: scale(1);
+//             }
+//             &:active {
+//               @include button-hover-active($btn-active);
+//               transform: scale(1);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Tablet: max 1024px
-@media only screen and (max-width: $table-width) {
-  .block-newsletter {
-    @include section-wrap(100%);
-    // width: 100%;
-  }
-}
+// @media only screen and (max-width: $table-width) {
+//   .block-newsletter {
+//     @include section-wrap(100%);
+//     // width: 100%;
+//   }
+// }
 
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
@@ -133,116 +133,92 @@
     background-color: $bg-green;
     border-radius: 0;
     @include section-wrap(100%);
-    .wrapper {
-      &__bg-wrap,
-      .bg-wrap {
-        padding: 32px 0 45px;
+    // .wrapper {
+    //   &__bg-wrap,
+    //   .bg-wrap {
+    //     padding: 32px 0 45px;
 
-        &__head {
-          @include font(24px, 700, 29px, $text-light, center);
-        }
-        &__desc {
-          @include font(16px, 400, 22px, $text-light, center);
-          margin-top: 8px;
-          margin-bottom: 24px;
-        }
-        &__subscribe-wrap,
-        .subscribe-wrap {
-          text-align: center;
-          display: flex;
-          justify-content: center;
+    //     &__head {
+    //       @include font(24px, 700, 29px, $text-light, center);
+    //     }
+    //     &__desc {
+    //       @include font(16px, 400, 22px, $text-light, center);
+    //       margin-top: 8px;
+    //       margin-bottom: 24px;
+    //     }
+    //     &__subscribe-wrap,
+    //     .subscribe-wrap {
+    //       text-align: center;
+    //       display: flex;
+    //       justify-content: center;
 
-          &__input {
-            background: $bg-stats;
-            border: $border-light;
-            border-radius: 4px 0px 0px 4px;
-            height: 40px;
-            width: 280px;
-            text-indent: 5px;
-          }
-          &__input:valid .accent-btn {
-            background-color: rgb(208, 127, 255);
-          }
+    //       &__input {
+    //         background: $bg-stats;
+    //         border: $border-light;
+    //         border-radius: 4px 0px 0px 4px;
+    //         height: 40px;
+    //         max-width: 280px;
+    //         text-indent: 5px;
+    //       }
+    //       &__input:valid .accent-btn {
+    //         background-color: rgb(208, 127, 255);
+    //       }
 
-          &__accent-btn,
-          .accent-btn {
-            @include button(27px, 23px, $bg-green);
-            border-radius: 0px 4px 4px 0px;
-            // color: $text-subscribe-btn;
-            @include font(16px, 700, 19.2px, $text-subscribe-btn, center);
-            background: rgba(255, 255, 255, 0.85098);
-            height: 42px;
+    //       &__accent-btn,
+    //       .accent-btn {
+    //         @include button(27px, 23px, $bg-green);
+    //         border-radius: 0px 4px 4px 0px;
+    //         // color: $text-subscribe-btn;
+    //         @include font(16px, 700, 19.2px, $text-subscribe-btn, center);
+    //         background: rgba(255, 255, 255, 0.85098);
+    //         height: 42px;
 
-            &:hover {
-              @include button-hover-active($text-link);
-              transform: scale(1);
-            }
-            &:active {
-              @include button-hover-active($btn-active);
-              transform: scale(1);
-            }
-          }
-        }
-      }
-    }
+    //         &:hover {
+    //           @include button-hover-active($text-link);
+    //           transform: scale(1);
+    //         }
+    //         &:active {
+    //           @include button-hover-active($btn-active);
+    //           transform: scale(1);
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
   .block-newsletter {
-    @include section-wrap(100%);
     .wrapper {
-      background-color: $bg-green;
-      border-radius: 8px;
-
       &__bg-wrap,
       .bg-wrap {
-        padding: 32px 10px 45px;
+        padding: 32px 3% 45px;
+      }
+    }
+  }
+}
 
-        &__head {
-          @include font(24px, 700, 29px, $text-light, center);
-        }
-        &__desc {
-          @include font(16px, 400, 22px, $text-light, center);
-          margin-top: 8px;
-          margin-bottom: 24px;
-        }
+// Mobile: max 322px
+@media only screen and (max-width: $mobile-min-width) {
+  .block-newsletter {
+    .wrapper {
+      &__bg-wrap,
+      .bg-wrap {
         &__subscribe-wrap,
         .subscribe-wrap {
-          text-align: center;
-          display: flex;
-          justify-content: center;
-
           &__input {
-            background: $bg-stats;
-            border: $border-light;
-            border-radius: 4px 0px 0px 4px;
-            height: 40px;
-            width: 180px;
-            text-indent: 5px;
-          }
-          &__input:valid .accent-btn {
-            background-color: rgb(208, 127, 255);
+            border-radius: 4px 4px 0 0;
+            max-width: 250px;
+            width: 100%;
           }
 
           &__accent-btn,
           .accent-btn {
-            @include button(27px, 23px, $bg-green);
-            border-radius: 0px 4px 4px 0px;
-            // color: $text-subscribe-btn;
-            @include font(16px, 700, 19.2px, $text-subscribe-btn, center);
-            background: rgba(255, 255, 255, 0.85098);
-            height: 42px;
-
-            &:hover {
-              @include button-hover-active($text-link);
-              transform: scale(1);
-            }
-            &:active {
-              @include button-hover-active($btn-active);
-              transform: scale(1);
-            }
+            border-radius: 0 0 4px 4px;
+            max-width: 252px;
+            width: 100%;
           }
         }
       }

@@ -96,34 +96,37 @@
 @media only screen and (max-width: $mobile-middle-width) {
   .block-stats {
     @include section-wrap(100%);
-    // background-color: $bg-stats;
-    // border-radius: 8px;
+    background-color: $bg-stats;
+    border-radius: none;
+    .wrapper {
+      // flex-wrap: wrap;
 
-    &__wrap,
-    .wrap {
-      @include flex(column, wrap, center, center);
-      width: 100%;
-      margin-top: 36px;
-      margin-bottom: 42px;
+      &__wrap,
+      .wrap {
+        @include flex(row, wrap, center, center);
+        // width: 50%;
+        margin-top: 36px;
+        margin-bottom: 42px;
+        &__item,
+        .item {
+          margin: 0 5%;
+          &__head {
+            @include font(24px, 700, 29px, $text-main, center);
+            margin-top: 10px;
+          }
 
-      &__item,
-      .item {
-        &__head {
-          @include font(24px, 700, 29px, $text-main, center);
-          margin-top: 10px;
+          &__desc {
+            @include font(16px, 500, 19px, $text-main, center);
+          }
         }
 
-        &__desc {
-          @include font(16px, 500, 19px, $text-main, center);
+        &__item--first {
+          margin-left: 2%;
         }
-      }
 
-      &__item--first {
-        margin-left: 0px;
-      }
-
-      &__item--last {
-        margin-right: 0px;
+        &__item--last {
+          margin-right: 2%;
+        }
       }
     }
   }

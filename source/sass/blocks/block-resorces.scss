@@ -168,7 +168,7 @@
     .head-wrap {
       @include flex(column, nowrap, space-between, center);
       @include font(12px, 700, 14px, $text-subscribe-btn, center);
-      width: auto;
+      width: 100%;
       padding: 70px 0 50px;
       margin: 0 15px;
 
@@ -199,7 +199,8 @@
       &__article-wrap,
       .article-wrap {
         max-width: 280px;
-        width: 100%;
+        min-width: 200;
+        width: 80%;
         position: relative;
         // padding: 126px 15px 15px 15px;
         margin: 15px 0 30px 0;
@@ -214,10 +215,10 @@
           width: 90%;
         }
       }
-      // .article-wrap--last {
-      //   max-width: 350px;
-      //   width: 100%;
-      // }
+      .article-wrap--last {
+        max-width: 280px;
+        width: 80%;
+      }
     }
   }
 }

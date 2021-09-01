@@ -82,5 +82,6 @@ input {
 @media only screen and (max-width: $mobile-middle-width) {
   .wrapper {
     @include wrapper(column, nowrap, space-between, center, 100%);
+    min-width: 200px;
   }
 }
