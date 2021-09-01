@@ -130,14 +130,13 @@
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-newsletter {
+    background-color: $bg-green;
+    border-radius: 0;
     @include section-wrap(100%);
     .wrapper {
-      background-color: $bg-green;
-      border-radius: 8px;
-
       &__bg-wrap,
       .bg-wrap {
-        padding: 32px 10px 45px;
+        padding: 32px 0 45px;
 
         &__head {
           @include font(24px, 700, 29px, $text-light, center);

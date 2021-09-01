@@ -13,14 +13,15 @@
   align-items: $align;
 }
 
-@mixin wrapper($direction, $wrap, $justify, $align, $max-width, $width) {
+@mixin wrapper($direction, $wrap, $justify, $align, $max-width) {
   display: flex;
   flex-flow: $direction $wrap;
   justify-content: $justify;
   align-items: $align;
   max-width: $max-width;
-  width: $width;
-  // padding: 0 3%;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 @mixin section-wrap($max-width) {

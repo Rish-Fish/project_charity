@@ -48,33 +48,39 @@ input {
 }
 
 .wrapper {
-  @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+  @include wrapper(column, nowrap, space-between, center, 940px);
 }
 
 // Tablet: max 1440px
 // @media only screen and (max-width: $table-big-width) {
 //   .wrapper {
-//     @include wrapper(column, nowrap, space-between, center, 940px, 100%);
+//     @include wrapper(column, nowrap, space-between, center, 940px);
 //   }
 // }
 
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
   .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 760px, 100%);
+    @include wrapper(column, nowrap, space-between, center, 760px);
   }
 }
 
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 490px, 100%);
+    @include wrapper(column, nowrap, space-between, center, 550px);
+    .special-padding {
+      padding: 0 2%;
+    }
+    // .special-margin {
+    //   margin: 0 1%;
+    // }
   }
 }
 
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
   .wrapper {
-    @include wrapper(column, nowrap, space-between, center, 320px, 100%);
+    @include wrapper(column, nowrap, space-between, center, 100%);
   }
 }
