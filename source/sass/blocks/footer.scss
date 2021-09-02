@@ -24,6 +24,8 @@
       &__social-wrap,
       .social-wrap {
         @include flex(row, wrap, space-between, flex-start);
+        margin-top: 5px;
+
         .social-img {
           // fill: #fff;
           // color: #fff;
