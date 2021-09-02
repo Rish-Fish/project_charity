@@ -5,7 +5,7 @@
   .head-wrap {
     @include flex(row, nowrap, space-between, center);
     width: 100%;
-    padding: 120px 0 88px 0;
+    padding: 120px 0 88px;
 
     &__desc,
     .desc {
@@ -65,25 +65,25 @@
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
   .block-resources {
-    @include section-wrap(100%);
+    // @include section-wrap(100%);
     &__head-wrap,
     .head-wrap {
-      width: 100%;
-      padding: 100px 0 50px 0;
-      margin: 0 15px;
+      // width: 100%;
+      padding: 100px 0 50px;
+      // margin: 0 15px;
 
       &__desc,
       .desc {
         width: 70%;
-        &__head {
-        }
+        // &__head {
+        // }
       }
     }
     &__content-wrap,
     .content-wrap {
       @include flex(row, wrap, space-between, flex-start);
 
-      width: 100%;
+      // width: 100%;
       margin-bottom: 50px;
       // justify-content: space-around;
 
@@ -91,7 +91,7 @@
       .article-wrap {
         width: 25%;
         padding: 25px 15px 15px 15px;
-        margin: 10px 0 30px 0;
+        margin: 10px 0 30px;
 
         &__desc {
           padding-top: 20px;
@@ -105,29 +105,30 @@
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-resources {
-    @include section-wrap(100%);
+    // @include section-wrap(100%);
     &__head-wrap,
     .head-wrap {
       @include flex(column, nowrap, space-between, center);
-      width: 100%;
-      padding: 100px 0 50px 0;
-      margin: 0 15px;
+      // width: 100%;
+      // padding: 100px 0 50px;
+      // margin: 0 15px;
+
       &__desc,
       .desc {
         width: 100%;
       }
       &__accent-btn {
         margin-top: 35px;
-        @include button(29px, 29px, $bg-green);
+        // @include button(29px, 29px, $bg-green);
         width: 90%;
       }
     }
     &__content-wrap,
     .content-wrap {
-      @include flex(row, wrap, space-between, center);
-      width: 100%;
-      margin-bottom: 50px;
-      justify-content: space-around;
+      @include flex(row, wrap, space-around, center);
+      // width: 100%;
+      // margin-bottom: 50px;
+      // justify-content: space-around;
 
       // &__article-wrap--first {
       //   max-width: 200px;
@@ -139,15 +140,15 @@
         width: 50%;
         position: relative;
         // padding: 126px 15px 15px 15px;
-        margin: 15px 0 30px 0;
+        margin: 15px 0 30px;
 
         &__desc {
           padding-top: 0;
-          padding-bottom: 30px;
+          // padding-bottom: 30px;
         }
         &__accent-btn {
-          @include button(20px, 20px, $bg-green);
-          align-self: center;
+          // @include button(20px, 20px, $bg-green);
+          // align-self: center;
           width: 90%;
         }
       }
@@ -162,35 +163,35 @@
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
   .block-resources {
-    @include section-wrap(100%);
+    // @include section-wrap(100%);
 
     &__head-wrap,
     .head-wrap {
-      @include flex(column, nowrap, space-between, center);
+      // @include flex(column, nowrap, space-between, center);
       @include font(12px, 700, 14px, $text-subscribe-btn, center);
-      width: 100%;
+      // width: 100%;
       padding: 70px 0 50px;
-      margin: 0 15px;
+      // margin: 0 15px;
 
       &__desc,
       .desc {
         @include font(12px, 700, 14px, $text-subscribe-btn, center);
 
-        width: 100%;
+        // width: 100%;
         margin: 0 15px;
       }
-      &__accent-btn {
-        margin-top: 35px;
-        @include button(29px, 29px, $bg-green);
-        width: 90%;
-      }
+      // &__accent-btn {
+      //   margin-top: 35px;
+      //   @include button(29px, 29px, $bg-green);
+      //   width: 90%;
+      // }
     }
     &__content-wrap,
     .content-wrap {
       @include flex(column, wrap, space-between, center);
-      width: 100%;
-      margin-bottom: 50px;
-      justify-content: space-around;
+      // width: 100%;
+      // margin-bottom: 50px;
+      // justify-content: space-around;
 
       // &__article-wrap--first {
       //   max-width: 200px;
@@ -201,19 +202,19 @@
         max-width: 280px;
         min-width: 200;
         width: 80%;
-        position: relative;
+        // position: relative;
         // padding: 126px 15px 15px 15px;
-        margin: 15px 0 30px 0;
+        // margin: 15px 0 30px 0;
 
-        &__desc {
-          padding-top: 0;
-          padding-bottom: 30px;
-        }
-        &__accent-btn {
-          @include button(20px, 20px, $bg-green);
-          align-self: center;
-          width: 90%;
-        }
+        // &__desc {
+        //   padding-top: 0;
+        //   padding-bottom: 30px;
+        // }
+        // &__accent-btn {
+        //   @include button(20px, 20px, $bg-green);
+        //   align-self: center;
+        //   width: 90%;
+        // }
       }
       .article-wrap--last {
         max-width: 280px;

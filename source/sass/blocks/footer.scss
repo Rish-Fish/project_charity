@@ -16,7 +16,7 @@
       @include font(12px, 500, 18px, $text-light, left);
       flex-direction: column;
       &__desc--br-mobile {
-        display: none;
+        // display: none;
       }
       &__desc {
         padding-top: 10px;
@@ -72,7 +72,7 @@
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .footer {
-    margin-top: 70px;
+    // margin-top: 70px;
 
     .left-side__desc {
       max-width: 210px;
@@ -83,28 +83,28 @@
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
   .footer {
-    @include section-wrap(100%);
-    background-color: $bg-black;
-    // margin-top: 104px;
-    padding: 40px 0 52px 0;
+    // @include section-wrap(100%);
+    // background-color: $bg-black;
+    // // margin-top: 104px;
+    // padding: 40px 0 52px 0;
 
     &__bottom-wrap,
     .bottom-wrap {
-      @include flex(row, wrap, space-between, flex-start);
-      width: 100%;
+      // @include flex(row, wrap, space-between, flex-start);
+      // width: 100%;
       // display: flex;
       // flex-direction: row;
 
       &__left-side,
       .left-side {
-        @include font(12px, 500, 18px, $text-light, left);
-        flex-direction: column;
-        &__desc--br-mobile {
-          display: block;
-        }
-        &__desc {
-          padding-top: 10px;
-        }
+        // @include font(12px, 500, 18px, $text-light, left);
+        // flex-direction: column;
+        // &__desc--br-mobile {
+        //   // display: block;
+        // }
+        // &__desc {
+        //   padding-top: 10px;
+        // }
         &__social-wrap,
         .social-wrap {
           @include flex(row, wrap, space-between, flex-start);
@@ -112,28 +112,28 @@
             // fill: #fff;
             // color: #fff;
           }
-          max-width: 50px;
+          // max-width: 50px;
         }
       }
 
       &__right-side,
       .right-side {
-        @include flex(column, wrap, flex-start, flex-end);
+        // @include flex(column, wrap, flex-start, flex-end);
 
         &__wrap,
         .wrap {
           min-width: 50%;
-          text-align: end;
-          @include font(12px, 500, 18px, $text-light, right);
+          // text-align: end;
+          // @include font(12px, 500, 18px, $text-light, right);
 
-          &__info {
-            @include font(12px, 500, 18px, $text-light, right);
-          }
+          // &__info {
+          //   @include font(12px, 500, 18px, $text-light, right);
+          // }
         }
       }
-      &__right-side .wrap:last-child {
-        padding-top: 10px;
-      }
+      // &__right-side .wrap:last-child {
+      //   padding-top: 10px;
+      // }
     }
   }
 }

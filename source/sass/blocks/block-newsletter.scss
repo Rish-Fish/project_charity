@@ -132,7 +132,7 @@
   .block-newsletter {
     background-color: $bg-green;
     border-radius: 0;
-    @include section-wrap(100%);
+    // @include section-wrap(100%);
     // .wrapper {
     //   &__bg-wrap,
     //   .bg-wrap {
@@ -194,7 +194,7 @@
     .wrapper {
       &__bg-wrap,
       .bg-wrap {
-        padding: 32px 3% 45px;
+        padding: 32px 2% 45px;
       }
     }
   }
@@ -208,6 +208,8 @@
       .bg-wrap {
         &__subscribe-wrap,
         .subscribe-wrap {
+          display: flex;
+          flex-wrap: wrap;
           &__input {
             border-radius: 4px 4px 0 0;
             max-width: 250px;
