@@ -216,7 +216,7 @@
         display: flex;
         flex-direction: column;
         // margin-top: 24px;
-        width: 100%;
+        width: 95%;
         // .accent-btn {
         //   // @include button(29px, 29px, $bg-green);
         //   // width: 100%;
@@ -224,7 +224,7 @@
         .accent-btn__light {
           // @include button(24px, 24px, $bg-btn-light);
           margin: 10px 0 0;
-          // width: 100%;
+          // width: 90%;
         }
       }
     }
@@ -272,16 +272,17 @@
         //   display: flex;
         //   flex-direction: column;
         //   margin-top: 24px;
-        //   width: 100%;
-        //   .accent-btn {
-        //     // @include button(29px, 29px, $bg-green);
-        //     width: 100%;
-        //   }
+        // width: 80%;
+        // .accent-btn {
+        //   //     // @include button(29px, 29px, $bg-green);
+        //   width: 80%;
+        // }
         //   .accent-btn__light {
         //     // @include button(24px, 24px, $bg-btn-light);
         //     // margin: 10px 0 0;
         //     // width: 100%;
         //   }
+        // }
         // }
       }
     }
