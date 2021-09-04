@@ -46,6 +46,15 @@ input {
   padding: 0;
   margin: 0;
 }
+.scroll-stop {
+  overflow: hidden;
+}
+.active {
+  display: block;
+}
+.disable {
+  display: none;
+}
 
 .wrapper {
   @include wrapper(column, nowrap, space-between, center, 940px);
