@@ -16,8 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
 </head>
 
-<body >
-
+<body>
+  <!-- class="mobile-scroll" -->
   <template style="display: none">
     <include src="build/img/sprite_auto.svg"></include>
   </template>
@@ -26,12 +26,12 @@
 
     <!-- Navigation -->
     <div class="wrapper">
-      <nav class="header__navigation navigation">
+      <nav class="header__navigation navigation" id="home">
         <ul class="navigation__side side">
-          <li class="side__item"><a href="#" class="side__link link">Home</a></li>
-          <li class="side__item"><a href="#" class="side__link link">About</a></li>
-          <li class="side__item"><a href="#" class="side__link link">Project</a></li>
-          <li class="side__item"><a href="#" class="side__link link">Partners</a></li>
+          <li class="side__item"><a href="#home" class="side__link link">Home</a></li>
+          <li class="side__item"><a href="#about" class="side__link link">About</a></li>
+          <li class="side__item"><a href="#projects" class="side__link link">Project</a></li>
+          <li class="side__item"><a href="#partners" class="side__link link">Partners</a></li>
         </ul>
         <div class="navigation__logo">
           <a href="#">
@@ -41,9 +41,9 @@
           </a>
         </div>
         <ul class="navigation__side side navigation__side--desktop-width">
-          <li class="side__item"><a href="#" class="side__link link">Mission</a></li>
-          <li class="side__item"><a href="#" class="side__link link">News</a></li>
-          <li class="side__item"><a href="#" class="side__link link">FAQ</a></li>
+          <li class="side__item"><a href="#mission" class="side__link link">Mission</a></li>
+          <li class="side__item"><a href="#news" class="side__link link">News</a></li>
+          <li class="side__item"><a href="#faq" class="side__link link">FAQ</a></li>
         </ul>
         <button type="button" class="navigation__accent-btn accent-btn">Share
           <svg width="16" height="16" class="accent-btn__icon-white-heart">
@@ -62,25 +62,25 @@
           </a>
         </div>
 
-        <div class="mobile-menu disable">
+        <div class="mobile-menu">
           <ul class="navigation ">
-            <li class="mobile__item"><a href="#" class="mobile__link link">Home</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">About</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">Project</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">Partners</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">Mission</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">News</a></li>
-            <li class="mobile__item"><a href="#" class="mobile__link link">FAQ</a></li>
+            <li class="mobile__item"><a href="#home" class="mobile__link link">Home</a></li>
+            <li class="mobile__item"><a href="#about" class="mobile__link link">About</a></li>
+            <li class="mobile__item"><a href="#projects" class="mobile__link link">Project</a></li>
+            <li class="mobile__item"><a href="#partners" class="mobile__link link">Partners</a></li>
+            <li class="mobile__item"><a href="#mission" class="mobile__link link">Mission</a></li>
+            <li class="mobile__item"><a href="#news" class="mobile__link link">News</a></li>
+            <li class="mobile__item"><a href="#faq" class="mobile__link link">FAQ</a></li>
           </ul>
         </div>
 
-        <div class="burger-toggle" width="40" height="40"></div>
+        <div class="burger-menu burger-toggle" width="40" height="40"></div>
       </div>
 
     </div>
 
     <!-- Section Hero -->
-    <section class="header__block-hero block-hero">
+    <section class="header__block-hero block-hero" id="about">
       <div class="wrapper">
         <h1 class="block-hero__head">Transforming Cebuano lives by<br>restoring the environment</h1>
         <div class="block-hero__btn-wrapper">
@@ -95,7 +95,7 @@
   <main>
 
     <!-- Section Quick info -->
-    <section class="block-quick-info">
+    <section class="block-quick-info" id="mission">
       <div class="wrapper">
         <h2 class="special-padding">The Earth Heart Foundation Cebu (EHFC) is a
           non-profit<wbr> organization that aims to assist and uplift<wbr>rural communities in Cebu with the support of various<wbr> environmental projects.
@@ -104,7 +104,7 @@
     </section>
 
     <!-- Section What we do -->
-    <section class="block-what-we-do">
+    <section class="block-what-we-do" id="projects">
       <div class="wrapper">
 
         <div class="block-what-we-do__head-wrap head-wrap">
@@ -175,7 +175,7 @@
     </section>
 
     <!-- Section Donate -->
-    <section class="block-donate">
+    <section class="block-donate" id="partners">
       <div class="wrapper">
         <div class="block-donate__wrap wrap">
           <h2 class="visually-hidden">Head</h2>
@@ -221,7 +221,7 @@
     </section>
 
     <!-- Section Resources -->
-    <section class="block-resources">
+    <section class="block-resources" id="news">
       <div class="wrapper">
 
         <div class="block-resources__head-wrap head-wrap">
@@ -259,7 +259,7 @@
     </section>
 
     <!-- Section Newsletter -->
-    <section class="block-newsletter">
+    <section class="block-newsletter" id="faq">
       <div class="wrapper">
         <div class="block-newsletter__bg-wrap bg-wrap">
           <h2 class="bg-wrap__head">Helps us make more sustainable projects</h2>
@@ -334,7 +334,7 @@
   </footer> -->
 
   <!-- <script src="js/vendor/input-mask.js"></script> -->
-  <script src="js/vendor/swiper-bundle.min.js"></script>
+  <!-- <script src="js/vendor/swiper-bundle.min.js"></script> -->
   <script src="js/main.js"></script>
 </body>
 
