@@ -1,132 +1,40 @@
 'use strict';
 
-// Табы абонементов
+// mobile-menu
 
-(function () {
-  var sectionSeasonTickets = document.querySelector('.season-tickets');
-  var abonementList = document.querySelector('.season-tickets__list');
+// вытащить лого на передний план - навесить .nav__logo-mobile на .nav__logo
+// навесить .active на .mobile-menu
+// навесить на .burger-menu .close-toggle
+// запретить взаимодействие с сайтом - на .mobile-container навесить .mobile-container__disable-bg
+// запретить скролл - на <body> навесить .scroll-stop
 
-  if (sectionSeasonTickets) {
-    var mountsTab = sectionSeasonTickets.querySelectorAll('.mounts__button');
-    var abonementElements = abonementList.querySelectorAll('.tickets__item');
+let burgerMenu = document.querySelector('.burger-menu')
+let navLogo = document.querySelector('.nav__logo');
+let mobileMenu = document.querySelector('.mobile-menu');
+let burgerToggle = document.querySelector('.burger-toggle');
+let mobileContainer = document.querySelector('.mobile-container');
+// let mobileScroll = document.querySelector('.mobile-scroll'); //вариант 2 с навешиванием предварительно на body спец.класса для упрощения (<body class="mobile-scroll">)
+let scrollStop = document.getElementsByTagName('body');
 
-    var switchAbonements = function (data) {
-      abonementElements.forEach(function (card) {
-        if (parseInt(card.getAttribute('tickets-mounth'), 10) !== parseInt(data, 10)) {
-          card.classList.add('tickets__item--hide');
-        } else {
-          card.classList.remove('tickets__item--hide');
-        }
-      });
-    };
-    switchAbonements(1);
+let mobileItemClose = document.querySelectorAll('.mobile__item');
 
-    mountsTab.forEach(function (button, n) {
-      function onMountsBtnClick(evt) {
-        evt.preventDefault();
-        for (var i = 0; i < mountsTab.length; i++) {
-          mountsTab[i].classList.remove('mounts__button--active');
-        }
-        mountsTab[n].classList.add('mounts__button--active');
-        var tabMounth = parseInt(mountsTab[n].getAttribute('mounth'), 10);
-        abonementElements.forEach(function (card) {
-          var ticketMount = parseInt(card.getAttribute('tickets-mounth'), 10);
-          if (tabMounth === ticketMount) {
-            card.classList.remove('tickets__item--hide');
-          } else {
-            card.classList.add('tickets__item--hide');
-          }
-        });
-      }
+burgerMenu.addEventListener('click', function() {
+  navLogo.classList.toggle('nav__logo-mobile');
+  mobileMenu.classList.toggle('active');
+  burgerMenu.classList.toggle('close-toggle');
+  mobileContainer.classList.toggle('mobile-container__disable-bg');
+  // mobileScroll.classList.toggle('scroll-stop'); //к варианту 2
+  document.body.classList.toggle('scroll-stop');
+});
 
-      button.addEventListener('click', onMountsBtnClick);
-    });
-  }
-})();
-
-// Слайдер тренеров
-
-(function () {
-  var sectionTrainers = document.querySelector('.trainers');
-  var sliderTrainers = sectionTrainers.querySelector('.slider');
-
-  if (!sectionTrainers.classList.contains('only-js')) {
-    sectionTrainers.classList.add('only-js');
-  }
-
-  if (sliderTrainers) {
-    sliderTrainers = new window.Swiper(sliderTrainers, {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 40,
-      slideClass: 'slider__item',
-      wrapperClass: 'slider__list',
-      navigation: {
-        nextEl: '.trainers__button--next',
-        prevEl: '.trainers__button--prev',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          spaceBetween: 0
-        },
-        768: {
-          slidesPerView: 2,
-          slidesPerGroup: 2,
-          spaceBetween: 30
-        },
-        1200: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-          spaceBetween: 40
-        },
-        1311: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-          spaceBetween: 40
-        }
-      }
-    });
-  }
-})();
-
-// Слайдер отзывов
-
-(function () {
-  var sectionReviews = document.querySelector('.reviews');
-  var sliderReviews = sectionReviews.querySelector('.reviews-slider');
-
-  if (!sectionReviews.classList.contains('only-js')) {
-    sectionReviews.classList.add('only-js');
-  }
-
-  if (sliderReviews) {
-    sliderReviews = new window.Swiper(sliderReviews, {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 20,
-      slideClass: 'reviews-slider__item',
-      wrapperClass: 'reviews-slider__list',
-      navigation: {
-        nextEl: '.reviews__button--next',
-        prevEl: '.reviews__button--prev',
-      },
-    });
-  }
-})();
-
-// Маска телефона
-
-(function () {
-  var userPhoneInput = document.querySelector('input[type="tel"]');
-
-  if (userPhoneInput) {
-    var maskOptions = {
-      mask: '+{7}(000)000-00-00'
-    };
-
-    window.mask = new window.IMask(userPhoneInput, maskOptions);
-  }
-
-})();
+// закрыть меню по клику на элементы меню (mobile-item)
+mobileItemClose.forEach(function (mobileItemClose) {
+  mobileItemClose.addEventListener('click', function() {
+    navLogo.classList.remove('nav__logo-mobile');
+    mobileMenu.classList.remove('active');
+    burgerMenu.classList.remove('close-toggle');
+    mobileContainer.classList.remove('mobile-container__disable-bg');
+    // mobileScroll.classList.remove('scroll-stop'); //к варианту 2
+    document.body.classList.remove('scroll-stop');
+  });
+});
