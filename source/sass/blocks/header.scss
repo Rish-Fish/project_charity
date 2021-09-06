@@ -111,21 +111,10 @@
 // Tablet: max 1440px
 @media only screen and (max-width: $table-big-width) {
   .header {
-    // @include section-wrap(100%);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-
-    // @include bg-img("../img/hero@1x.jpg");
-    // background-size: cover;
     height: 566px;
 
     @media (min-resolution: $retina-dppx) {
-      // background-image: url("../img/hero@2x.jpg");
-      // background-size: cover;
-      // width: 100%;
       height: 566px;
-      // background-position: center;
     }
 
     .header__navigation,
@@ -147,36 +136,15 @@
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
   .header {
-    // @include section-wrap(100%);
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-
-    // @include bg-img("../img/hero@1x.jpg");
-    // background-size: cover;
     max-height: 460px;
 
     @media (min-resolution: $retina-dppx) {
-      // background-image: url("../img/hero@2x.jpg");
-      // background-size: cover;
-      // width: 100%;
       max-height: 460px;
-      // background-position: center;
     }
 
     .header__navigation,
     .navigation {
       margin: 0 10px 0 10px;
-      // .side {
-      //   margin: 0 10px 0 10px;
-      // }
-      // &__logo {
-      //   margin: 0 15px 0 15px;
-      // }
-      // &__accent-btn,
-      // .accent-btn {
-      //   margin: 0 10px 0 15px;
-      // }
     }
 
     &__block-hero,
@@ -191,18 +159,11 @@
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .header {
-    // @include section-wrap(100%);
-
-    // @include bg-img("../img/hero@1x.jpg");
-    // background-size: cover;
     max-height: 380px;
     display: flex;
     justify-content: space-between;
 
     @media (min-resolution: $retina-dppx) {
-      // background-image: url("../img/hero@2x.jpg");
-      // background-size: cover;
-      // width: 100%;
       max-height: 380px;
     }
     .header__navigation,
@@ -213,28 +174,17 @@
     // .page-header__block-hero,
     &__block-hero,
     .block-hero {
-      // margin-top: 198px;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       padding: 0 3%;
 
       &__head {
         margin-top: 80px;
-        // @include font(30px, 700, 35px, $text-light, center);
       }
       &__btn-wrapper {
         display: flex;
         flex-direction: column;
-        // margin-top: 24px;
         margin-bottom: 10%;
-
         width: 95%;
-        // .accent-btn {
-        //   // @include button(29px, 29px, $bg-green);
-        //   // width: 100%;
-        // }
+
         .accent-btn__light {
           // @include button(24px, 24px, $bg-btn-light);
           margin: 10px 0 0;
@@ -286,7 +236,6 @@
       .close-toggle {
         background-image: url("../img/close.svg");
         opacity: 50%;
-        // margin-top: 1%;
       }
       .close-toggle:hover {
         filter: invert(100%) sepia(11%) saturate(600%) hue-rotate(320deg)
@@ -348,61 +297,5 @@
   }
   .scroll-stop {
     overflow: hidden;
-  }
-}
-// Mobile: max 500px
-@media only screen and (max-width: $mobile-middle-width) {
-  .header {
-    // @include section-wrap(100%);
-
-    // @include bg-img("../img/hero@1x.jpg");
-    // background-size: cover;
-    // height: 350px;
-
-    // @media (min-resolution: $retina-dppx) {
-    //   // background-image: url("../img/hero@2x.jpg");
-    //   // background-size: cover;
-    //   // width: 1440px;
-    //   // height: 300px;
-    // }
-    // .header__navigation,
-    // .navigation {
-    //   display: none;
-    // }
-
-    // .page-header__block-hero,
-    &__block-hero,
-    .block-hero {
-      // margin-top: 198px;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-      // padding: 0 5px;
-
-      // .wrapper {
-      //   margin-left: 0;
-      //   margin-right: 0;
-      // &__head {
-      //   margin-top: 50px;
-      //   @include font(30px, 700, 35px, $text-light, center);
-      // }
-      &__btn-wrapper {
-        //   display: flex;
-        //   flex-direction: column;
-        // width: 80%;
-        // .accent-btn {
-        //   //     // @include button(29px, 29px, $bg-green);
-        //   width: 80%;
-        // }
-        //   .accent-btn__light {
-        //     // @include button(24px, 24px, $bg-btn-light);
-        //     // margin: 10px 0 0;
-        //     // width: 100%;
-        //   }
-        // }
-      }
-      // }
-    }
   }
 }

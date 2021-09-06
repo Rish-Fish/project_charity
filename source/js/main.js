@@ -13,7 +13,6 @@ let navLogo = document.querySelector('.nav__logo');
 let mobileMenu = document.querySelector('.mobile-menu');
 let burgerToggle = document.querySelector('.burger-toggle');
 let mobileContainer = document.querySelector('.mobile-container');
-// let mobileScroll = document.querySelector('.mobile-scroll'); //вариант 2 с навешиванием предварительно на body спец.класса для упрощения (<body class="mobile-scroll">)
 let scrollStop = document.getElementsByTagName('body');
 
 let mobileItemClose = document.querySelectorAll('.mobile__item');
@@ -23,7 +22,6 @@ burgerMenu.addEventListener('click', function() {
   mobileMenu.classList.toggle('active');
   burgerMenu.classList.toggle('close-toggle');
   mobileContainer.classList.toggle('mobile-container__disable-bg');
-  // mobileScroll.classList.toggle('scroll-stop'); //к варианту 2
   document.body.classList.toggle('scroll-stop');
 });
 
@@ -34,7 +32,6 @@ mobileItemClose.forEach(function (mobileItemClose) {
     mobileMenu.classList.remove('active');
     burgerMenu.classList.remove('close-toggle');
     mobileContainer.classList.remove('mobile-container__disable-bg');
-    // mobileScroll.classList.remove('scroll-stop'); //к варианту 2
     document.body.classList.remove('scroll-stop');
   });
 });

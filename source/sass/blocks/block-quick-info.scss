@@ -5,23 +5,3 @@
   @include font(18px, 400, 22px, $text-main, center);
   padding: 38px 0;
 }
-
-// Mobile: max 768px
-@media only screen and (max-width: $mobile-width) {
-  // .block-quick-info {
-  //   // @include section-wrap(100%);
-  //   // padding: 38px 0;
-  //   // max-width: 310px;
-  //   // width: 100%;
-  //   // margin: 15px;
-  //   // .wrapper {
-  //   //   .special-padding {
-  //   //     padding: 0 1%;
-  //   //   }
-  //   // }
-  // }
-}
-
-// Mobile: max 500px
-@media only screen and (max-width: $mobile-middle-width) {
-}

@@ -1,11 +1,7 @@
 .block-stats {
   @include section-wrap(100%);
 
-  // align-items: center;
-  // margin: 0 auto;
-
   .wrapper {
-    // align-items: center;
     background-color: $bg-stats;
     border-radius: 8px;
     &__wrap,
@@ -37,17 +33,9 @@
   }
 }
 
-// Tablet: max 1440px
-@media only screen and (max-width: $table-big-width) {
-  .block-stats {
-    // @include section-wrap(100%);
-  }
-}
-
 // Tablet: max 1024px
 @media only screen and (max-width: $table-width) {
   .block-stats {
-    // @include section-wrap(100%);
     background-color: $bg-stats;
     border-radius: none;
   }
@@ -56,19 +44,9 @@
 // Mobile: max 768px
 @media only screen and (max-width: $mobile-width) {
   .block-stats {
-    // @include section-wrap(100%);
-    // background-color: $bg-stats;
-    // border-radius: none;
-
     .wrapper {
-      // flex-wrap: wrap;
-
       &__wrap,
       .wrap {
-        // @include flex(row, wrap, space-between, center);
-        // width: 50%;
-        // margin-top: 36px;
-        // margin-bottom: 42px;
         &__item,
         .item {
           &__head {
@@ -96,38 +74,14 @@
 // Mobile: max 500px
 @media only screen and (max-width: $mobile-middle-width) {
   .block-stats {
-    // @include section-wrap(100%);
-    // background-color: $bg-stats;
-    // border-radius: none;
     .wrapper {
-      // flex-wrap: wrap;
-
       &__wrap,
       .wrap {
         @include flex(row, wrap, center, center);
-        // width: 50%;
-        // margin-top: 36px;
-        // margin-bottom: 42px;
         &__item,
         .item {
           margin: 0 5%;
-          // &__head {
-          //   @include font(24px, 700, 29px, $text-main, center);
-          //   margin-top: 10px;
-          // }
-
-          // &__desc {
-          //   @include font(16px, 500, 19px, $text-main, center);
-          // }
         }
-
-        // &__item--first {
-        //   margin-left: 2%;
-        // }
-
-        // &__item--last {
-        //   margin-right: 2%;
-        // }
       }
     }
   }
