@@ -35,3 +35,14 @@ mobileItemClose.forEach(function (mobileItemClose) {
     document.body.classList.remove('scroll-stop');
   });
 });
+
+// cкрытие меню по клику на Esc
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    navLogo.classList.remove('nav__logo-mobile');
+    mobileMenu.classList.remove('active');
+    burgerMenu.classList.remove('close-toggle');
+    mobileContainer.classList.remove('mobile-container__disable-bg');
+    document.body.classList.remove('scroll-stop');
+  }
+  });
