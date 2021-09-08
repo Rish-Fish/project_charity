@@ -1,4 +1,4 @@
-# Проект Charity
+# charity_project
 
 Hi!
 This is my "Charity" project.

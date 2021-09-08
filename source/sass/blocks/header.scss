@@ -5,6 +5,7 @@
   justify-content: flex-start;
 
   @include bg-img("../img/hero@1x.jpg");
+  background-color: $text-main;
   background-size: cover;
   background-position: center center;
   height: 700px;
