@@ -1,8 +1,8 @@
 # charity_project
 
-Hi!
-This is my "Charity" project.
-I completed it using html, scss and js.
+Hi!  
+This is my "Charity" project.  
+I completed it using html, scss and js.  
 In this project I used:
 
 - Gulp
@@ -15,7 +15,7 @@ In this project I used:
 - media queries to create adaptive screens
 - added mobile menu in js
 
-You can see the project here https://rish-fish.github.io/project_charity/
+You can see the project here https://rish-fish.github.io/project_charity/  
 Здесь вы можете посмотреть проект https://rish-fish.github.io/project_charity/
 
 ## Краткая инструкция по работе
