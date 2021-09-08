@@ -1,5 +1,21 @@
 # Проект Charity
 
+Hi!
+This is my "Charity" project.
+I completed it using html, scss and js.
+In this project I used:
+
+- Gulp
+- SASS
+- flex-box to create responsive screens
+- mixins
+- colors variables and width variables for @media
+- @font-face rule
+- sprites
+- media queries to create adaptive screens
+- added mobile menu in js
+
+You can cee the project here https://rish-fish.github.io/project_charity/
 Здесь вы можете посмотреть проект https://rish-fish.github.io/project_charity/
 
 ## Краткая инструкция по работе
