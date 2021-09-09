@@ -251,6 +251,7 @@
         height: 100vh;
         width: 80vw;
         right: 0;
+        overflow: auto;
 
         .navigation {
           display: flex;
